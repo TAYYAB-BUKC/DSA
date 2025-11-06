@@ -38,5 +38,52 @@
 				node = node.link;
 			}
 		}
+
+		public void CountNodes()
+		{
+			if (start is null)
+			{
+				Console.WriteLine("0 Items found in LinkedList.");
+				return;
+			}
+
+			Node node = start;
+			int count = 0;
+			while (node != null)
+			{
+				count++;
+				node = node.link;
+			}
+			
+			Console.WriteLine($"{count} Items found in LinkedList.");
+		}
+
+		public void SearchList(int numberToBeSearched)
+		{
+			if (start is null)
+			{
+				Console.WriteLine($"{numberToBeSearched} not found in LinkedList.");
+				return;
+			}
+
+			Node node = start;
+			int position = 0;
+			while (node != null)
+			{
+				if (node.info == numberToBeSearched)
+					break;
+				position++;
+				node = node.link;
+			}
+
+			if(node is null)
+			{
+				Console.WriteLine($"{numberToBeSearched} not found in LinkedList.");
+			}
+			else
+			{
+				Console.WriteLine($"{numberToBeSearched} found in LinkedList at position {position}.");
+			}
+		}
 	}
 }
