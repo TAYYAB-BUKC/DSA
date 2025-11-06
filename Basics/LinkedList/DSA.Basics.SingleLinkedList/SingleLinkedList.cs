@@ -88,25 +88,16 @@
 
 		public void InsertAtBeginning(int info)
 		{
-			if (start is null)
-			{
-				Node newNode = new Node(info);
-				start = newNode;
-				return;
-			}
-			else
-			{
-				Node newNode = new Node(info);
-				newNode.link = start;
-				start = newNode;
-			}
+			Node newNode = new Node(info);
+			newNode.link = start;
+			start = newNode;
 		}
 
 		public void InsertAtEnd(int info)
 		{
+			Node newNode = new Node(info);
 			if (start is null)
 			{
-				Node newNode = new Node(info);
 				start = newNode;
 				return;
 			}
@@ -118,7 +109,6 @@
 					node = node.link;
 				}
 
-				Node newNode = new Node(info);
 				node.link = newNode;
 			}
 		}
