@@ -102,5 +102,69 @@
 				InsertAtEnd(new Random().Next(i, 1000));
 			}
 		}
+
+		public void InsertBefore(int info, int previousInfo)
+		{
+			Node newNode = new Node(info);
+
+			if(start is null)
+			{
+				start = newNode;
+				return;
+			}
+
+			Node node = start;
+			while (node != null)
+			{
+				if (node.link?.info == previousInfo)
+					break;
+				node = node.link;
+			}
+			
+			if(node is not null)
+			{
+				newNode.link = node.link;
+				node.link = newNode;
+			}
+			else
+			{
+				Console.WriteLine($"Node not found with info {previousInfo}");
+			}
+		}
+
+		public void InsertAfter(int info, int nextInfo)
+		{
+			Node newNode = new Node(info);
+			Node node = start;
+			while(node != null)
+			{
+				if(node.info == nextInfo)
+					break;
+				node = node.link;
+			}
+
+			if (node?.link is null)
+			{
+				node!.link = newNode;
+			}
+			else
+			{
+				newNode.link = node.link;
+				node.link = newNode;
+			}
+		}
+
+		public void InsertAtPosition(int info, int position)
+		{
+			Node newNode = new Node(info);
+			Node node = start;
+			for (int i = 0; i < (position - 1) && node.link != null; i++)
+			{
+				node = node.link;
+			}
+			
+			newNode.link = node.link!;
+			node.link = newNode;
+		}
 	}
 }
