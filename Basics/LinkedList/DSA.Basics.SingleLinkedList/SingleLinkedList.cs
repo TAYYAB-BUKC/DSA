@@ -85,5 +85,42 @@
 				Console.WriteLine($"{numberToBeSearched} found in LinkedList at position {position}.");
 			}
 		}
+
+		public void InsertAtBeginning(int info)
+		{
+			if (start is null)
+			{
+				Node newNode = new Node(info);
+				start = newNode;
+				return;
+			}
+			else
+			{
+				Node newNode = new Node(info);
+				newNode.link = start;
+				start = newNode;
+			}
+		}
+
+		public void InsertAtEnd(int info)
+		{
+			if (start is null)
+			{
+				Node newNode = new Node(info);
+				start = newNode;
+				return;
+			}
+			else
+			{
+				Node node = start;
+				while (node.link != null)
+				{
+					node = node.link;
+				}
+
+				Node newNode = new Node(info);
+				node.link = newNode;
+			}
+		}
 	}
 }
