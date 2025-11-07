@@ -215,14 +215,17 @@
 			}
 
 			Node node = start;
-			while (node != null)
+			while (node.link != null)
 			{
 				if (node.link.info == info)
 					break;
 				node = node.link;
 			}
 
-			node!.link = node.link.link;
+			if (node.link is null)
+				Console.WriteLine($"Element {info} not in list");
+			else
+				node!.link = node.link.link;			
 		}
 	}
 }
