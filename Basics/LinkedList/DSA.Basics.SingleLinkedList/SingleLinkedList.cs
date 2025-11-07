@@ -227,5 +227,21 @@
 			else
 				node!.link = node.link.link;			
 		}
+
+		public void ReverseList()
+		{
+			Node previous = null!, next = null!;
+
+			Node node = start;
+			while (node != null)
+			{
+				next = node.link;
+				node.link = previous;
+				previous = node;
+				node = next;
+			}
+
+			start = previous;
+		}
 	}
 }
