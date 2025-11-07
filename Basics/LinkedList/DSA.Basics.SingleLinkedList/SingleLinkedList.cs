@@ -166,5 +166,63 @@
 			newNode.link = node.link!;
 			node.link = newNode;
 		}
+
+		public void DeleteFirstNode()
+		{
+			if (start is null)
+			{
+				return;
+			}
+
+			start = start.link;
+		}
+
+		public void DeleteLastNode()
+		{
+			if (start is null)
+			{
+				Console.WriteLine("List is empty.");
+				return;
+			}
+
+			if (start.link == null)
+			{
+				start = null!;
+				return;
+			}
+
+			Node node = start;
+			while (node.link.link != null)
+			{
+				node = node.link;
+			}
+
+			node.link = null!;
+		}
+
+		public void DeleteNode(int info)
+		{
+			if (start is null)
+			{
+				Console.WriteLine("List is empty.");
+				return;
+			}
+
+			if (start.info == info)
+			{
+				start = start.link;
+				return;
+			}
+
+			Node node = start;
+			while (node != null)
+			{
+				if (node.link.info == info)
+					break;
+				node = node.link;
+			}
+
+			node!.link = node.link.link;
+		}
 	}
 }
