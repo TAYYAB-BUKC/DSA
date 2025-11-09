@@ -21,12 +21,13 @@ while (true)
 	Console.WriteLine("11. Delete any node");
 	Console.WriteLine("12. Reverse the list");
 	Console.WriteLine("13. Sort by exchanging data using Bubble Sort");
-	Console.WriteLine("14. Quit");
+	Console.WriteLine("14. Sort by exchanging link using Bubble Sort");
+	Console.WriteLine("15. Quit");
 
 	Console.Write("Enter your choice : ");
 	choice = Convert.ToInt32(Console.ReadLine());
 
-	if (choice == 14)
+	if (choice == 15)
 		break;
 
 	switch (choice)
@@ -89,6 +90,9 @@ while (true)
 			break;
 		case 13:
 			list.SortListByExchangingDataUsingBubbleSort();
+			break;
+		case 14:
+			list.SortListByExchangingLinkUsingBubbleSort();
 			break;
 		default:
 			Console.WriteLine("Wrong choice");
