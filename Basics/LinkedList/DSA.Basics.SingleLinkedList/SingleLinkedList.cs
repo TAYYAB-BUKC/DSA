@@ -261,5 +261,34 @@
 				}
 			}
 		}
+
+		public void SortListByExchangingLinkUsingBubbleSort()
+		{
+			Node node = null!, end, previous;
+
+			for (end = null!; end != start; end = node)
+			{
+				for (previous = node = start; node.link != end; previous = node, node = node.link)
+				{
+					Node next = node.link;
+
+					if (node.info > node.link.info)
+					{
+						node.link = next.link;
+						next.link = node;
+
+						if (node != start)
+							previous.link = next;
+						else
+							start = next;
+
+						Node temp = node;
+						node = next;
+						next = temp;
+					}
+				}
+			}
+
+		}
 	}
 }
