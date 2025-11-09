@@ -99,6 +99,6 @@ while (true)
 			break;
 	}
 	Console.WriteLine();
-	Console.WriteLine("Exiting");
-	Console.ReadKey();
 }
+
+Console.WriteLine("Exiting");
