@@ -243,5 +243,23 @@
 
 			start = previous;
 		}
+
+		public void SortListByExchangingDataUsingBubbleSort()
+		{
+			Node node = null!, end;
+
+			for (end = null!; end != start.link; end = node)
+			{
+				for (node = start; node.link != end; node = node.link)
+				{
+					if(node.info > node.link.info)
+					{
+						int temp = node.info;
+						node.info = node.link.info;
+						node.link.info = temp;
+					}
+				}
+			}
+		}
 	}
 }
