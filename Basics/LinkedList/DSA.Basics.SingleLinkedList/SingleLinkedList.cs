@@ -243,5 +243,52 @@
 
 			start = previous;
 		}
+
+		public void SortListByExchangingDataUsingBubbleSort()
+		{
+			Node node = null!, end;
+
+			for (end = null!; end != start.link; end = node)
+			{
+				for (node = start; node.link != end; node = node.link)
+				{
+					if(node.info > node.link.info)
+					{
+						int temp = node.info;
+						node.info = node.link.info;
+						node.link.info = temp;
+					}
+				}
+			}
+		}
+
+		public void SortListByExchangingLinkUsingBubbleSort()
+		{
+			Node node = null!, end, previous;
+
+			for (end = null!; end != start; end = node)
+			{
+				for (previous = node = start; node.link != end; previous = node, node = node.link)
+				{
+					Node next = node.link;
+
+					if (node.info > node.link.info)
+					{
+						node.link = next.link;
+						next.link = node;
+
+						if (node != start)
+							previous.link = next;
+						else
+							start = next;
+
+						Node temp = node;
+						node = next;
+						next = temp;
+					}
+				}
+			}
+
+		}
 	}
 }
