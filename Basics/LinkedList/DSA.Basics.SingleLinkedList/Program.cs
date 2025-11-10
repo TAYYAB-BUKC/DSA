@@ -22,12 +22,13 @@ while (true)
 	Console.WriteLine("12. Reverse the list");
 	Console.WriteLine("13. Sort by exchanging data using Bubble Sort");
 	Console.WriteLine("14. Sort by exchanging link using Bubble Sort");
-	Console.WriteLine("15. Quit");
+	Console.WriteLine("15. Merge two sorted lists by creating a new list");
+	Console.WriteLine("16. Quit");
 
 	Console.Write("Enter your choice : ");
 	choice = Convert.ToInt32(Console.ReadLine());
 
-	if (choice == 15)
+	if (choice == 16)
 		break;
 
 	switch (choice)
@@ -93,6 +94,20 @@ while (true)
 			break;
 		case 14:
 			list.SortListByExchangingLinkUsingBubbleSort();
+			break;
+		case 15:
+			SingleLinkedList secondList = new SingleLinkedList();
+			SingleLinkedList newList = new SingleLinkedList();
+			list.SortListByExchangingDataUsingBubbleSort();
+			secondList.CreateList(5);
+			secondList.SortListByExchangingDataUsingBubbleSort();
+			newList = list.MergeByCreatingANewList(secondList);
+			Console.WriteLine("First List - ");
+			list.DisplayList();
+			Console.WriteLine("Second List - ");
+			secondList.DisplayList();
+			Console.WriteLine("Merged List - ");
+			newList.DisplayList();
 			break;
 		default:
 			Console.WriteLine("Wrong choice");
