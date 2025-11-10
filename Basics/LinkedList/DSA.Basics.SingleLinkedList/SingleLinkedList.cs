@@ -288,7 +288,63 @@
 					}
 				}
 			}
+		}
 
+		public SingleLinkedList MergeByCreatingANewList(SingleLinkedList newList)
+		{
+			SingleLinkedList mergeList = new SingleLinkedList();
+			mergeList.start = MergeByCreatingANewList(start, newList.start);
+			return mergeList;
+		}
+
+		private Node MergeByCreatingANewList(Node node1, Node node2)
+		{
+			Node newListStart;
+
+			if (node1.info <= node2.info)
+			{
+				newListStart = new Node(node1.info);
+				node1 = node1.link;
+			}
+			else
+			{
+				newListStart = new Node(node2.info);
+				node2 = node2.link;
+			}
+
+			Node pM = newListStart;
+
+			while (node1 != null && node2 != null)
+			{
+				if (node1.info <= node2.info)
+				{
+					pM.link = new Node(node1.info);
+					node1 = node1.link;
+				}
+				else
+				{
+					pM.link = new Node(node2.info);
+					node2 = node2.link;
+				}
+				pM = pM.link;
+			}
+
+			/*If second list has finished and elements left in first list*/
+			while (node1 != null)
+			{
+				pM.link = new Node(node1.info);
+				node1 = node1.link;
+				pM = pM.link;
+			}
+
+			/*If first list has finished and elements left in second list*/
+			while (node2 != null)
+			{
+				pM.link = new Node(node2.info);
+				node2 = node2.link;
+				pM = pM.link;
+			}
+			return newListStart;
 		}
 	}
 }
