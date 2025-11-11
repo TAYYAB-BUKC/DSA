@@ -415,5 +415,40 @@
 			}
 			return newListStart;
 		}
+
+		public void SortListByUsingRecursiveMergeSort()
+		{
+			start = SortListByUsingRecursiveMergeSort(start);
+		}
+
+		private Node SortListByUsingRecursiveMergeSort(Node unsortedLinkedList)
+		{
+			if (unsortedLinkedList is null || unsortedLinkedList.link is null)
+				return unsortedLinkedList!;
+
+			Node startNode = unsortedLinkedList;
+			Node endNode = DivideLinkedList(startNode);
+
+			Node firstPartNode = SortListByUsingRecursiveMergeSort(startNode);
+			Node secondPartNode = SortListByUsingRecursiveMergeSort(endNode);
+			return MergeByArrangingLinks(firstPartNode, secondPartNode);
+		}
+
+		private Node DivideLinkedList(Node startNode)
+		{
+			Node consecutiveNode = startNode.link.link;
+			while (startNode != null && consecutiveNode != null)
+			{
+				startNode = startNode.link;
+				consecutiveNode = consecutiveNode.link?.link;
+			}
+
+			//startNode!.link = null!;
+			//return startNode;
+
+			Node node = startNode!.link;
+			startNode!.link = null!;
+			return node;
+		}
 	}
 }
