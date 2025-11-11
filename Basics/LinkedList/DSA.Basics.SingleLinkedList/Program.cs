@@ -23,12 +23,13 @@ while (true)
 	Console.WriteLine("13. Sort by exchanging data using Bubble Sort");
 	Console.WriteLine("14. Sort by exchanging link using Bubble Sort");
 	Console.WriteLine("15. Merge two sorted lists by creating a new list");
-	Console.WriteLine("16. Quit");
+	Console.WriteLine("16. Merge two sorted lists by arranging links");
+	Console.WriteLine("17. Quit");
 
 	Console.Write("Enter your choice : ");
 	choice = Convert.ToInt32(Console.ReadLine());
 
-	if (choice == 16)
+	if (choice == 17)
 		break;
 
 	switch (choice)
@@ -102,12 +103,26 @@ while (true)
 			secondList.CreateList(5);
 			secondList.SortListByExchangingDataUsingBubbleSort();
 			newList = list.MergeByCreatingANewList(secondList);
-			Console.WriteLine("First List - ");
+			Console.WriteLine("\nFirst List - ");
 			list.DisplayList();
-			Console.WriteLine("Second List - ");
+			Console.WriteLine("\nSecond List - ");
 			secondList.DisplayList();
-			Console.WriteLine("Merged List - ");
+			Console.WriteLine("\nMerged List - ");
 			newList.DisplayList();
+			break;
+		case 16:
+			SingleLinkedList secondListMerge = new SingleLinkedList();
+			SingleLinkedList newListMerge = new SingleLinkedList();
+			list.SortListByExchangingDataUsingBubbleSort();
+			secondListMerge.CreateList(5);
+			secondListMerge.SortListByExchangingDataUsingBubbleSort();
+			newListMerge = list.MergeByArrangingLinks(secondListMerge);
+			Console.WriteLine("\nFirst List - ");
+			list.DisplayList();
+			Console.WriteLine("\nSecond List - ");
+			secondListMerge.DisplayList();
+			Console.WriteLine("\nMerged List - ");
+			newListMerge.DisplayList();
 			break;
 		default:
 			Console.WriteLine("Wrong choice");
