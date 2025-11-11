@@ -346,5 +346,74 @@
 			}
 			return newListStart;
 		}
+
+		public SingleLinkedList MergeByArrangingLinks(SingleLinkedList newList)
+		{
+			SingleLinkedList mergeList = new SingleLinkedList();
+			mergeList.start = MergeByArrangingLinks(start, newList.start);
+			return mergeList;
+		}
+
+		private Node MergeByArrangingLinks(Node node1, Node node2)
+		{
+			Node newListStart;
+
+			if (node1.info <= node2.info)
+			{
+				newListStart = new Node(node1.info);
+				node1 = node1.link;
+			}
+			else
+			{
+				newListStart = new Node(node2.info);
+				node2 = node2.link;
+			}
+
+			Node newListEnd = newListStart;
+
+			while (node1 != null && node2 != null)
+			{
+				if (node1.info <= node2.info)
+				{
+					newListEnd.link = new Node(node1.info);
+					node1 = node1.link;
+				}
+				else
+				{
+					newListEnd.link = new Node(node2.info);
+					node2 = node2.link;
+				}
+				newListEnd = newListEnd.link;
+			}
+
+			/*If second list has finished and elements left in first list*/
+			//while (node1 != null)
+			//{
+			//	newListEnd.link = new Node(node1.info);
+			//	node1 = node1.link;
+			//	newListEnd = newListEnd.link;
+			//}
+
+			///*If first list has finished and elements left in second list*/
+			//while (node2 != null)
+			//{
+			//	newListEnd.link = new Node(node2.info);
+			//	node2 = node2.link;
+			//	newListEnd = newListEnd.link;
+			//}
+
+			/*If second list has finished and elements left in first list*/
+			if (node1 != null)
+			{
+				newListEnd.link = node1;
+			}
+
+			/*If first list has finished and elements left in second list*/
+			if (node2 != null)
+			{
+				newListEnd.link = node2;
+			}
+			return newListStart;
+		}
 	}
 }
