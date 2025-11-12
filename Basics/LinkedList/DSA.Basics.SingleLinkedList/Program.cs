@@ -26,12 +26,13 @@ while (true)
 	Console.WriteLine("15. Merge two sorted lists by creating a new list");
 	Console.WriteLine("16. Merge two sorted lists by arranging links");
 	Console.WriteLine("17. Sort by using recursive Merge Sort");
-	Console.WriteLine("18. Quit");
+	Console.WriteLine("18. Detect Cycle");
+	Console.WriteLine("19. Quit");
 
 	Console.Write("Enter your choice : ");
 	choice = Convert.ToInt32(Console.ReadLine());
 
-	if (choice == 18)
+	if (choice == 19)
 		break;
 
 	switch (choice)
@@ -134,6 +135,16 @@ while (true)
 			newListForMergeSort.SortListByUsingRecursiveMergeSort();
 			Console.WriteLine("\nSorted Merged List - ");
 			newListForMergeSort.DisplayList();
+			break;
+		case 18:
+			if (list.HasCycle())
+			{
+				Console.WriteLine("List does contain a cycle");
+			}
+			else
+			{
+				Console.WriteLine("List does not contain a cycle");
+			}
 			break;
 		default:
 			Console.WriteLine("Wrong choice");
