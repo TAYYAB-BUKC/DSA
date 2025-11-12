@@ -450,5 +450,34 @@
 			startNode!.link = null!;
 			return node;
 		}
+
+		public bool HasCycle()
+		{
+			if(FindCycle() is null)
+			{
+				return false;
+			}
+			return true;
+		}
+
+		private Node FindCycle()
+		{
+			if (start is null || start.link is null)
+				return null!;
+
+			Node slowReference = start, fastreference = start;
+
+			while (fastreference != null && fastreference.link != null)
+			{
+				slowReference = slowReference.link;
+				fastreference = fastreference.link.link;
+
+				if(slowReference == fastreference)
+				{
+					return slowReference;
+				}
+			}
+			return null!;
+		}
 	}
 }
