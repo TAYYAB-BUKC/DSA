@@ -479,5 +479,44 @@
 			}
 			return null!;
 		}
+
+		public void RemoveCycle()
+		{
+			Node cycleNode = FindCycle();
+			if (cycleNode is null)
+				return;
+
+			Console.WriteLine("Node at which the cycle was detected is " + cycleNode.info);
+
+			Node node1 = cycleNode, node2 = cycleNode;
+			int cycleLength = 0;
+			do
+			{
+				cycleLength++;
+				node2 = node2.link;
+			} while (node1 != node2);
+
+			Console.WriteLine("Length of cycle is : " + cycleLength);
+
+			int remainingListLength = 0;
+			node1 = start;
+			while (node1 != node2)
+			{
+				remainingListLength++;
+				node1 = node1.link;
+				node2 = node2.link;
+			}
+
+			Console.WriteLine("Number of nodes not included in the cycle are : " + remainingListLength);
+
+			int listLength = cycleLength + remainingListLength;
+			Console.WriteLine("Length of the list is : " + listLength);
+
+			node1 = start;
+			for (int i = 1; i <= listLength - 1; i++)
+				node1 = node1.link;
+
+			node1.link = null!;
+		}
 	}
 }
