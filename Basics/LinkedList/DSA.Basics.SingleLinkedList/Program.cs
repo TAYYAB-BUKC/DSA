@@ -27,12 +27,13 @@ while (true)
 	Console.WriteLine("16. Merge two sorted lists by arranging links");
 	Console.WriteLine("17. Sort by using recursive Merge Sort");
 	Console.WriteLine("18. Detect Cycle");
-	Console.WriteLine("19. Quit");
+	Console.WriteLine("19. Remove Cycle");
+	Console.WriteLine("20. Quit");
 
 	Console.Write("Enter your choice : ");
 	choice = Convert.ToInt32(Console.ReadLine());
 
-	if (choice == 19)
+	if (choice == 20)
 		break;
 
 	switch (choice)
@@ -145,6 +146,9 @@ while (true)
 			{
 				Console.WriteLine("List does not contain a cycle");
 			}
+			break;
+		case 19:
+			list.RemoveCycle();
 			break;
 		default:
 			Console.WriteLine("Wrong choice");
