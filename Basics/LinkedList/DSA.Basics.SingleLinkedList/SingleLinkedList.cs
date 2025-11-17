@@ -518,5 +518,26 @@
 
 			node1.link = null!;
 		}
+
+		public void InsertCycle(int info)
+		{
+			if (start == null)
+				return;
+
+			Node node = start, cycleNode = null!, previousNode = null!;
+
+			while (node != null)
+			{
+				if (node.info == info)
+					cycleNode = node;
+				previousNode = node;
+				node = node.link;
+			}
+
+			if (cycleNode is not null)
+				previousNode.link = cycleNode;
+			else
+				Console.WriteLine(info + " not present in list");
+		}
 	}
 }
