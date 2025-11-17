@@ -27,13 +27,14 @@ while (true)
 	Console.WriteLine("16. Merge two sorted lists by arranging links");
 	Console.WriteLine("17. Sort by using recursive Merge Sort");
 	Console.WriteLine("18. Detect Cycle");
-	Console.WriteLine("19. Remove Cycle");
-	Console.WriteLine("20. Quit");
+	Console.WriteLine("19. Insert Cycle");
+	Console.WriteLine("20. Remove Cycle");
+	Console.WriteLine("21. Quit");
 
 	Console.Write("Enter your choice : ");
 	choice = Convert.ToInt32(Console.ReadLine());
 
-	if (choice == 20)
+	if (choice == 21)
 		break;
 
 	switch (choice)
@@ -148,6 +149,11 @@ while (true)
 			}
 			break;
 		case 19:
+			Console.Write("Enter the element where the cycle needs to be inserted : ");
+			data = Convert.ToInt32(Console.ReadLine());
+			list.InsertCycle(data);
+			break;
+		case 20:
 			list.RemoveCycle();
 			break;
 		default:
