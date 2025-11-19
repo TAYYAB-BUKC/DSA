@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedList", "LinkedList", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.SingleLinkedList", "Basics\LinkedList\DSA.Basics.SingleLinkedList\DSA.Basics.SingleLinkedList.csproj", "{B2F19CEF-C28F-4AB7-8508-D3D1F1282D66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.DoubleLinkedList", "Basics\LinkedList\DSA.Basics.DoubleLinkedList\DSA.Basics.DoubleLinkedList.csproj", "{667D526F-3B7F-4695-B5E0-143A63D96E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B2F19CEF-C28F-4AB7-8508-D3D1F1282D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2F19CEF-C28F-4AB7-8508-D3D1F1282D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2F19CEF-C28F-4AB7-8508-D3D1F1282D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667D526F-3B7F-4695-B5E0-143A63D96E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667D526F-3B7F-4695-B5E0-143A63D96E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667D526F-3B7F-4695-B5E0-143A63D96E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667D526F-3B7F-4695-B5E0-143A63D96E7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -29,5 +35,6 @@ Global
 		{356E900C-313E-4043-8204-5D3282A9BB78} = {E09A9C13-3842-4E2F-925A-305991706A6B}
 		{BD1E9081-4CBB-4D5B-85EF-0387AB44DADC} = {356E900C-313E-4043-8204-5D3282A9BB78}
 		{B2F19CEF-C28F-4AB7-8508-D3D1F1282D66} = {BD1E9081-4CBB-4D5B-85EF-0387AB44DADC}
+		{667D526F-3B7F-4695-B5E0-143A63D96E7E} = {BD1E9081-4CBB-4D5B-85EF-0387AB44DADC}
 	EndGlobalSection
 EndGlobal
