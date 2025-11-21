@@ -24,5 +24,11 @@ namespace DSA.Basics.DoubleLinkedList
 			Console.WriteLine();
 		}
 
+		public void InsertInEmptyList(int info)
+		{
+			Node node = new Node(info);
+			start = node;
+			Console.WriteLine();
+		}
 	}
 }
