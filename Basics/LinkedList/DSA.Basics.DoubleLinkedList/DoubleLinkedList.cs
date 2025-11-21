@@ -18,7 +18,7 @@ namespace DSA.Basics.DoubleLinkedList
 			Console.WriteLine("List Items: ");
 			while (node != null)
 			{
-				Console.Write($"{node.info}");
+				Console.Write($"{node.info}\t");
 				node = node.next;
 			}
 			Console.WriteLine();
