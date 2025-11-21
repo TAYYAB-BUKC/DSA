@@ -30,5 +30,14 @@ namespace DSA.Basics.DoubleLinkedList
 			start = node;
 			Console.WriteLine();
 		}
+
+		public void InsertAtBeginning(int info)
+		{
+			Node node = new Node(info);
+			node.next = start;
+			start.previous = node;
+			start = node;
+			Console.WriteLine();
+		}
 	}
 }
