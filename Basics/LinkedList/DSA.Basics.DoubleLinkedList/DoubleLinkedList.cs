@@ -54,5 +54,32 @@ namespace DSA.Basics.DoubleLinkedList
 			newNode.previous = node;
 			Console.WriteLine();
 		}
+
+		public void InsertAfterNode(int info, int newInfo)
+		{
+			Node newNode = new Node(newInfo);
+
+			Node node = start;
+			while (node != null)
+			{
+				if (node.info == info)
+					break;
+				node = node.next;
+			}
+
+			if (node != null)
+			{
+				newNode.previous = node;
+				newNode.next = node.next;
+				if (node.next != null)
+					node.next.previous = newNode; /*should not be done when p refers to last node*/
+				node.next = newNode;
+			}
+			else
+			{
+				Console.WriteLine($"{info} is not present in the list.");
+			}
+			Console.WriteLine();
+		}
 	}
 }
