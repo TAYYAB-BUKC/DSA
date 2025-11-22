@@ -81,5 +81,38 @@ namespace DSA.Basics.DoubleLinkedList
 			}
 			Console.WriteLine();
 		}
+
+		public void InsertBeforeNode(int info, int newInfo)
+		{
+			Node newNode = new Node(newInfo);
+
+			Node node = start;
+
+			if(node.info == info)
+			{
+				newNode.next = start;
+				start = newNode;
+				return;
+			}
+
+			while (node != null)
+			{
+				if (node.next?.info == info)
+					break;
+				node = node.next;
+			}
+
+			if (node != null)
+			{
+				newNode.previous = node;
+				newNode.next = node.next;
+				node.next = newNode;
+			}
+			else
+			{
+				Console.WriteLine($"{info} is not present in the list.");
+			}
+			Console.WriteLine();
+		}
 	}
 }
