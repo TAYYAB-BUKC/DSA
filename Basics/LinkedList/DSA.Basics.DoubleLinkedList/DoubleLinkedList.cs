@@ -131,5 +131,28 @@ namespace DSA.Basics.DoubleLinkedList
 			start = start.next;
 			start.previous = null;
 		}
+
+		public void DeleteLastNode()
+		{
+			if (start is null)
+			{
+				Console.WriteLine("List is already empty.");
+				return;
+			}
+
+			if (start.next is null)
+			{
+				start = null;
+				return;
+			}
+
+			Node node = start;
+			while (node.next.next != null)
+			{
+				node = node.next;
+			}
+
+			node.next = null;
+		}
 	}
 }
