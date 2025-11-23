@@ -187,5 +187,24 @@ namespace DSA.Basics.DoubleLinkedList
 				node.next.previous = node.previous;
 			}
 		}
+
+		public void ReverseList()
+		{
+			if (start is null)
+				return;
+
+			Node node = start;
+			Node nextNode = node.next;
+			node.next = null;
+			node.previous = nextNode;
+			while (nextNode != null)
+			{
+				nextNode.previous = nextNode.next;
+				nextNode.next = node;
+				node = nextNode;
+				nextNode = nextNode.previous;
+			}
+			start = node;
+		}
 	}
 }
