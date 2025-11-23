@@ -177,8 +177,15 @@ namespace DSA.Basics.DoubleLinkedList
 				node = node.next;
 			}
 
-			node.previous.next = node.next;
-			node.next.previous = node.previous;
+			if(node.next is null)
+			{
+				node.previous.next = null;
+			}
+			else
+			{
+				node.previous.next = node.next;
+				node.next.previous = node.previous;
+			}
 		}
 	}
 }
