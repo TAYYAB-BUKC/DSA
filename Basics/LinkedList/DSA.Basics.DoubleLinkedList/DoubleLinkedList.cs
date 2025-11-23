@@ -206,5 +206,13 @@ namespace DSA.Basics.DoubleLinkedList
 			}
 			start = node;
 		}
+
+		public void CreateList(int numberOfNodes)
+		{
+			for (int i = 0; i < numberOfNodes; i++)
+			{
+				InsertAtEnd(new Random().Next(i, 1000));
+			}
+		}
 	}
 }
