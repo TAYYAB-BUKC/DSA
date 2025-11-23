@@ -31,6 +31,59 @@ namespace DSA.Basics.DoubleLinkedList
 				if (choice == 11)
 					break;
 
+				switch (choice)
+				{
+					case 1:
+						list.DisplayList();
+						break;
+					case 2:
+						Console.Write("Enter the element to be inserted: ");
+						data = Convert.ToInt32(Console.ReadLine());
+						list.InsertInEmptyList(data);
+						break;
+					case 3:
+						Console.Write("Enter the element to be inserted: ");
+						data = Convert.ToInt32(Console.ReadLine());
+						list.InsertAtBeginning(data);
+						break;
+					case 4:
+						Console.Write("Enter the element to be inserted: ");
+						data = Convert.ToInt32(Console.ReadLine());
+						list.InsertAtEnd(data);
+						break;
+					case 5:
+						Console.Write("Enter the element to be inserted: ");
+						data = Convert.ToInt32(Console.ReadLine());
+						Console.Write("Enter the element after which to insert: ");
+						info = Convert.ToInt32(Console.ReadLine());
+						list.InsertAfterNode(data, info);
+						break;
+					case 6:
+						Console.Write("Enter the element to be inserted: ");
+						data = Convert.ToInt32(Console.ReadLine());
+						Console.Write("Enter the element before which to insert: ");
+						info = Convert.ToInt32(Console.ReadLine());
+						list.InsertBeforeNode(data, info);
+						break;
+					case 7:
+						list.DeleteFirstNode();
+						break;
+					case 8:
+						list.DeleteLastNode();
+						break;
+					case 9:
+						Console.Write("Enter the element to be deleted: ");
+						data = Convert.ToInt32(Console.ReadLine());
+						list.DeleteNode(data);
+						break;
+					case 10:
+						list.ReverseList();
+						break;
+					default:
+						Console.WriteLine("Wrong choice");
+						break;
+				}
+				Console.WriteLine();
 			}
 			Console.WriteLine("Exiting");
 		}
