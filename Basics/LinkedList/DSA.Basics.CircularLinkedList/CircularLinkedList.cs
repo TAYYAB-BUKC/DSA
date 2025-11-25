@@ -21,5 +21,19 @@
 			while (node != end.link);
 			Console.WriteLine();
 		}
+
+		public void InsertAtBeginning(int info)
+		{
+			Node newNode = new Node(info);
+			if (end is null)
+			{
+				end = newNode;
+				end.link = newNode;
+				return;
+			}
+
+			newNode.link = end.link;
+			end.link = newNode;
+		}
 	}
 }
