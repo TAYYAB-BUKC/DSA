@@ -28,6 +28,7 @@
 			if (end is null)
 			{
 				end = newNode;
+				end.link = newNode;
 				return;
 			}
 
