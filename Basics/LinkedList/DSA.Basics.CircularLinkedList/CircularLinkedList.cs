@@ -17,7 +17,7 @@
 			{
 				if (node is null)
 					break;
-				Console.WriteLine($"{node.info}\t");
+				Console.Write($"{node.info}\t");
 				node = node.link;
 			}
 			while (node != end.link);
