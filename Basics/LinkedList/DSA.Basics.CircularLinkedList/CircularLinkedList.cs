@@ -17,7 +17,7 @@
 			{
 				if (node is null)
 					break;
-				Console.WriteLine($"{node.info}\t");
+				Console.Write($"{node.info}\t");
 				node = node.link;
 			}
 			while (node != end.link);
@@ -51,6 +51,14 @@
 			newNode.link = end.link;
 			end.link = newNode;
 			end = newNode;
+		}
+
+		public void CreateList(int numberOfNodes)
+		{
+			for (int i = 0; i < numberOfNodes; i++)
+			{
+				InsertAtEnd(new Random().Next(i, 1000));
+			}
 		}
 	}
 }
