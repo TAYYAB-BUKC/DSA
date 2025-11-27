@@ -60,5 +60,30 @@
 				InsertAtEnd(new Random().Next(i, 1000));
 			}
 		}
+
+		public void InsertAfter(int info, int newInfo)
+		{
+			Node newNode = new Node(newInfo);
+			Node node = end.link;
+			do
+			{
+				if (node.info == info)
+					break;
+				node = node.link;
+			}
+			while (node != end.link);
+
+			if (node != end.link && node.info != info)
+			{
+				Console.WriteLine($"{info} not present in the list");
+			}
+			else
+			{
+				newNode.link = node.link;
+				node.link = newNode;
+				if (node == end)
+					end = newNode;
+			}
+		}
 	}
 }
