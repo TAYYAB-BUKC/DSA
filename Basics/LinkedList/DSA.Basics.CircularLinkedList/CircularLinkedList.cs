@@ -85,5 +85,10 @@
 					end = newNode;
 			}
 		}
+		
+		public void DeleteFirstNode()
+		{
+			end.link = end.link.link;
+		}
 	}
 }
