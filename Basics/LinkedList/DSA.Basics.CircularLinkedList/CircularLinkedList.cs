@@ -90,6 +90,7 @@
 		{
 			if (end is null)
 				return;
+
 			if(end.link is null)
 			{
 				end = null!;
@@ -97,6 +98,27 @@
 			}
 
 			end.link = end.link.link;
+		}
+
+		public void DeleteLastNode()
+		{
+			if (end is null)
+				return;
+
+			if (end.link is null)
+			{
+				end = null!;
+				return;
+			}
+
+			Node node = end.link;
+			while (node.link != end)
+			{
+				node = node.link;
+			}
+
+			node.link = end.link;
+			end = node;
 		}
 	}
 }
