@@ -15,8 +15,14 @@ list.InsertAtBeginning(5);
 list.InsertAtEnd(35);
 list.InsertAtEnd(40);
 list.InsertAfter(40, 100);
+list.InsertAtEnd(1000);
 list.DisplayList();
 list.DeleteFirstNode();
+Console.WriteLine("After Deleting First Node");
 list.DisplayList();
+list.DeleteLastNode();
+Console.WriteLine("After Deleting Last Node");
+list.DisplayList();
+
 
 Console.ReadKey();
