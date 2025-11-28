@@ -91,7 +91,7 @@
 			if (end is null)
 				return;
 
-			if(end.link is null)
+			if(end.link == end)
 			{
 				end = null!;
 				return;
@@ -105,7 +105,7 @@
 			if (end is null)
 				return;
 
-			if (end.link is null)
+			if (end.link == end)
 			{
 				end = null!;
 				return;
