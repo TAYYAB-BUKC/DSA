@@ -88,6 +88,14 @@
 		
 		public void DeleteFirstNode()
 		{
+			if (end is null)
+				return;
+			if(end.link is null)
+			{
+				end = null!;
+				return;
+			}
+
 			end.link = end.link.link;
 		}
 	}
