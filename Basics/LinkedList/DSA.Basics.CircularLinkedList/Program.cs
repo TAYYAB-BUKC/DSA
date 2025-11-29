@@ -23,6 +23,9 @@ list.DisplayList();
 list.DeleteLastNode();
 Console.WriteLine("After Deleting Last Node");
 list.DisplayList();
+list.DeleteNode(35);
+Console.WriteLine("After Deleting Node");
+list.DisplayList();
 
 
 Console.ReadKey();
