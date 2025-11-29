@@ -120,5 +120,21 @@
 			node.link = end.link;
 			end = node;
 		}
+
+		public void DeleteNode(int info)
+		{
+			if (end is null)
+				return;
+
+			Node node = end.link;
+			while (node.link != end)
+			{
+				if (node.info == info)
+					break;
+				node = node.link;
+			}
+
+			node.link = node.link.link;
+		}
 	}
 }
