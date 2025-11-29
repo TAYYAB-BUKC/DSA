@@ -1,4 +1,6 @@
-﻿namespace DSA.Basics.CircularLinkedList
+﻿using System.Collections.Generic;
+
+namespace DSA.Basics.CircularLinkedList
 {
 	public class CircularLinkedList
 	{
@@ -125,6 +127,17 @@
 		{
 			if (end is null)
 				return;
+
+			if (end.link == end && end.info == info)  /*Deletion of only node*/
+			{
+				end = null!;
+				return;
+			}
+			if (end.link.info == info)  /*Deletion of first node*/
+			{
+				end.link = end.link.link;
+				return;
+			}
 
 			Node node = end.link;
 			while (node.link != end)
