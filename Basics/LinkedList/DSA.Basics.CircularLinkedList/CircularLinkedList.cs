@@ -129,7 +129,7 @@
 			Node node = end.link;
 			while (node.link != end)
 			{
-				if (node.info == info)
+				if (node.link.info == info)
 					break;
 				node = node.link;
 			}
