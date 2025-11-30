@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace DSA.Basics.CircularLinkedList
+﻿namespace DSA.Basics.CircularLinkedList
 {
 	public class CircularLinkedList
 	{
@@ -148,6 +146,23 @@ namespace DSA.Basics.CircularLinkedList
 			}
 
 			node.link = node.link.link;
+		}
+
+		public void ConcatenateList(CircularLinkedList list)
+		{
+			if (end is null)
+			{
+				end = list.end;
+				return;
+			}
+
+			if (list.end is null)
+				return;
+
+			Node node = end.link;
+			end.link = list.end.link;
+			list.end.link = node;
+			end = list.end;
 		}
 	}
 }
