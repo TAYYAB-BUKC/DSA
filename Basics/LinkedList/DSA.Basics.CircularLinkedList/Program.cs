@@ -1,41 +1,34 @@
-﻿// See https://aka.ms/new-console-template for more information
-using DSA.Basics.CircularLinkedList;
+﻿using DSA.Basics.CircularLinkedList;
 
-Console.WriteLine("Hello, World!");
+int choice, data, info;
 
-CircularLinkedList list = new CircularLinkedList();
+CircularLinkedList List = new CircularLinkedList();
 
-list.CreateList(5);
-list.InsertAtBeginning(5);
-//list.InsertAtBeginning(15);
-//list.InsertAtBeginning(15);
-//list.InsertAtBeginning(20);
-//list.InsertAtBeginning(25);
-//list.InsertAtBeginning(30);
-list.InsertAtEnd(35);
-list.InsertAtEnd(40);
-list.InsertAfter(40, 100);
-list.InsertAtEnd(1000);
-list.DisplayList();
-list.DeleteFirstNode();
-Console.WriteLine("After Deleting First Node");
-list.DisplayList();
-list.DeleteLastNode();
-Console.WriteLine("After Deleting Last Node");
-list.DisplayList();
-list.DeleteNode(35);
-Console.WriteLine("After Deleting Node");
-list.DisplayList();
+while (true)
+{
+	Console.WriteLine("1. Create list");
+	Console.WriteLine("2. Display list");
+	Console.WriteLine("3. Insert in the beginning");
+	Console.WriteLine("4. Insert at the end");
+	Console.WriteLine("5. Insert after a node");
+	Console.WriteLine("6. Delete first node");
+	Console.WriteLine("7. Delete last node");
+	Console.WriteLine("8. Delete any node");
+	Console.WriteLine("9. Concatenate list");
+	Console.WriteLine("10. Quit");
 
+	Console.Write("Enter your choice : ");
+	choice = Convert.ToInt32(Console.ReadLine());
 
-CircularLinkedList newListForConcatenation = new CircularLinkedList();
-newListForConcatenation.CreateList(5);
-Console.WriteLine("\nFirst List - ");
-list.DisplayList();
-Console.WriteLine("\nSecond List - ");
-newListForConcatenation.DisplayList();
-Console.WriteLine("\nFinal List - ");
-list.ConcatenateList(newListForConcatenation);
-list.DisplayList();
+	if (choice == 10)
+		break;
 
-Console.ReadKey();
+	switch (choice)
+	{
+		default:
+			Console.WriteLine("Wrong choice");
+			break;
+	}
+	Console.WriteLine();
+}
+Console.WriteLine("Exiting");
