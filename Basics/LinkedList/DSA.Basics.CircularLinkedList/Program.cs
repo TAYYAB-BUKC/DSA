@@ -1,4 +1,5 @@
 ﻿using DSA.Basics.CircularLinkedList;
+using System.Collections.Generic;
 
 int choice, data, info;
 
@@ -25,6 +26,53 @@ while (true)
 
 	switch (choice)
 	{
+		case 1:
+			Console.Write("Enter the number of elements: ");
+			data = Convert.ToInt32(Console.ReadLine());
+			List.CreateList(data);
+			break;
+		case 2:
+			List.DisplayList();
+			break;
+		case 3:
+			Console.Write("Enter the element to be inserted: ");
+			data = Convert.ToInt32(Console.ReadLine());
+			List.InsertAtBeginning(data);
+			break;
+		case 4:
+			Console.Write("Enter the element to be inserted: ");
+			data = Convert.ToInt32(Console.ReadLine());
+			List.InsertAtEnd(data);
+			break;
+		case 5:
+			Console.Write("Enter the element to be inserted: ");
+			data = Convert.ToInt32(Console.ReadLine());
+			Console.Write("Enter the element after which to insert: ");
+			info = Convert.ToInt32(Console.ReadLine());
+			List.InsertAfter(data, info);
+			break;
+		case 6:
+			List.DeleteFirstNode();
+			break;
+		case 7:
+			List.DeleteLastNode();
+			break;
+		case 8:
+			Console.Write("Enter the element to be deleted: ");
+			data = Convert.ToInt32(Console.ReadLine());
+			List.DeleteNode(data);
+			break;
+		case 9:
+			CircularLinkedList newListForConcatenation = new CircularLinkedList();
+			newListForConcatenation.CreateList(5);
+			Console.WriteLine("\nFirst List - ");
+			List.DisplayList();
+			Console.WriteLine("\nSecond List - ");
+			newListForConcatenation.DisplayList();
+			Console.WriteLine("\nFinal List - ");
+			List.ConcatenateList(newListForConcatenation);
+			List.DisplayList();
+			break;
 		default:
 			Console.WriteLine("Wrong choice");
 			break;
