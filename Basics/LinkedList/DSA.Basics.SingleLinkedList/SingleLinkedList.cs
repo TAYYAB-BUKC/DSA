@@ -540,8 +540,6 @@
 				Console.WriteLine(info + " not present in list");
 		}
 
-
-
 		public void ConcatenateList(SingleLinkedList list)
 		{
 			if (start is null)

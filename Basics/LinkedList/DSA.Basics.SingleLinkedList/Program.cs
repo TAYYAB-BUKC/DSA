@@ -29,12 +29,13 @@ while (true)
 	Console.WriteLine("18. Detect Cycle");
 	Console.WriteLine("19. Insert Cycle");
 	Console.WriteLine("20. Remove Cycle");
-	Console.WriteLine("21. Quit");
+	Console.WriteLine("21. Concatenate List");
+	Console.WriteLine("22. Quit");
 
 	Console.Write("Enter your choice : ");
 	choice = Convert.ToInt32(Console.ReadLine());
 
-	if (choice == 21)
+	if (choice == 22)
 		break;
 
 	switch (choice)
@@ -155,6 +156,17 @@ while (true)
 			break;
 		case 20:
 			list.RemoveCycle();
+			break;
+		case 21:
+			SingleLinkedList newListForConcatenation = new SingleLinkedList();
+			newListForConcatenation.CreateList(5);
+			Console.WriteLine("\nFirst List - ");
+			list.DisplayList();
+			Console.WriteLine("\nSecond List - ");
+			newListForConcatenation.DisplayList();
+			Console.WriteLine("\nFinal List - ");
+			list.ConcatenateList(newListForConcatenation);
+			list.DisplayList();
 			break;
 		default:
 			Console.WriteLine("Wrong choice");
