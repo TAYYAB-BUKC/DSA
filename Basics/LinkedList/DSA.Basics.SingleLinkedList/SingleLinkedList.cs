@@ -539,5 +539,27 @@
 			else
 				Console.WriteLine(info + " not present in list");
 		}
+
+
+
+		public void ConcatenateList(SingleLinkedList list)
+		{
+			if (start is null)
+			{
+				start = list.start;
+				return;
+			}
+
+			if (list.start is null)
+				return;
+
+			Node node = start;
+			while (node.link != null)
+			{
+				node = node.link;
+			}
+
+			node.link = list.start;
+		}
 	}
 }
