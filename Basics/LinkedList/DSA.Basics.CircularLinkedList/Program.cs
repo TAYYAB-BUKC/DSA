@@ -28,4 +28,14 @@ Console.WriteLine("After Deleting Node");
 list.DisplayList();
 
 
+CircularLinkedList newListForConcatenation = new CircularLinkedList();
+newListForConcatenation.CreateList(5);
+Console.WriteLine("\nFirst List - ");
+list.DisplayList();
+Console.WriteLine("\nSecond List - ");
+newListForConcatenation.DisplayList();
+Console.WriteLine("\nFinal List - ");
+list.ConcatenateList(newListForConcatenation);
+list.DisplayList();
+
 Console.ReadKey();
