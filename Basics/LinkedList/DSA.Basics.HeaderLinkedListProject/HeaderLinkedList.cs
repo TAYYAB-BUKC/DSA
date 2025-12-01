@@ -2,7 +2,7 @@
 {
 	public class HeaderLinkedList
 	{
-		public Node head { get; set; } = null!;
+		public Node head { get; set; } = new Node(0);
 
 		public void DisplayList()
 		{
