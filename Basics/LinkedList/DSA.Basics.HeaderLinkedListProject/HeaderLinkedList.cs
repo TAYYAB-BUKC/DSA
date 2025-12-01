@@ -2,7 +2,7 @@
 {
 	public class HeaderLinkedList
 	{
-		public Node head { get; set; } = null!;
+		public Node head { get; set; } = new Node(0);
 
 		public void DisplayList()
 		{
@@ -20,6 +20,13 @@
 				node = node.link;
 			}
 			Console.WriteLine();
+		}
+
+		public void InsertAtBeginning(int info)
+		{
+			Node newNode = new Node(info);
+			newNode.link = head.link;
+			head.link = newNode;
 		}
 	}
 }
