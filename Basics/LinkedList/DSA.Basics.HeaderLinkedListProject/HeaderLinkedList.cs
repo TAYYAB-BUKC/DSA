@@ -21,5 +21,12 @@
 			}
 			Console.WriteLine();
 		}
+
+		public void InsertAtBeginning(int info)
+		{
+			Node newNode = new Node(info);
+			newNode.link = head.link;
+			head.link = newNode;
+		}
 	}
 }
