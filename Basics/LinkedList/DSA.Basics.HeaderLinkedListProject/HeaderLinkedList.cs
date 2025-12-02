@@ -28,5 +28,25 @@
 			newNode.link = head.link;
 			head.link = newNode;
 		}
+
+		public void InsertBefore(int info, int newInfo)
+		{
+			Node newNode = new(newInfo);
+			Node node = head;
+			while (node.link != null)
+			{
+				if (node.link.info == info)
+					break;
+				node = node.link;
+			}
+
+			if (node.link == null)
+				Console.WriteLine(info + " not present in the list");
+			else
+			{
+				newNode.link = node.link;
+				node.link = newNode;
+			}
+		}
 	}
 }
