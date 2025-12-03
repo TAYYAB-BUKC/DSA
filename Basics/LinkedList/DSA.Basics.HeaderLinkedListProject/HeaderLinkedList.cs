@@ -60,5 +60,24 @@
 
 			node.link = newNode;
 		}
+
+		public void InsertAtPosition(int info, int position)
+		{
+			Node newNode = new(info);
+			Node node = head;
+			int index;
+			for (index = 1; index <= position - 1 && node is not null; index++)
+			{
+				node = node.link;
+			}
+
+			if(node is null)
+				Console.WriteLine("You can insert only upto " + (index - 1) + "th position\n\n");
+			else
+			{
+				newNode.link = node.link;
+				node.link = newNode;
+			}
+		}
 	}
 }
