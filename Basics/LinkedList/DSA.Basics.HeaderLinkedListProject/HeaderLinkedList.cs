@@ -48,5 +48,17 @@
 				node.link = newNode;
 			}
 		}
+
+		public void InsertAtEnd(int info)
+		{
+			Node newNode = new(info);
+			Node node = head;
+			while (node.link != null)
+			{
+				node = node.link;
+			}
+
+			node.link = newNode;
+		}
 	}
 }
