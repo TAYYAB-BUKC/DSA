@@ -19,4 +19,10 @@ list.InsertBefore(5, 0);
 
 list.DisplayList();
 
+list.InsertAtEnd(30);
+list.InsertAtEnd(35);
+list.InsertAtEnd(40);
+
+list.DisplayList();
+
 Console.ReadKey();
