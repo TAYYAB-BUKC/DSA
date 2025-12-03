@@ -25,4 +25,14 @@ list.InsertAtEnd(40);
 
 list.DisplayList();
 
+list.InsertAtPosition(-15,0);
+list.DisplayList();
+list.InsertAtPosition(-10, 0);
+list.DisplayList();
+list.InsertAtPosition(-05, 0);
+list.DisplayList();
+list.InsertAtPosition(450, 450);
+list.DisplayList();
+
+
 Console.ReadKey();
