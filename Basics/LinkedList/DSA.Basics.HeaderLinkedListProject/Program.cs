@@ -4,6 +4,9 @@ using DSA.Basics.HeaderLinkedListProject;
 
 HeaderLinkedList list = new HeaderLinkedList();
 
+list.CreateList(5);
+list.DisplayList();
+
 list.InsertAtBeginning(25);
 list.InsertAtBeginning(15);
 list.InsertAtBeginning(10);

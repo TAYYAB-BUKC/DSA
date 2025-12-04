@@ -80,8 +80,6 @@
 			}
 		}
 
-
-
 		public void DeleteNode(int info)
 		{
 			Node node = head.link;
