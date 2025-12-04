@@ -79,5 +79,27 @@
 				node.link = newNode;
 			}
 		}
+
+
+
+		public void DeleteNode(int info)
+		{
+			Node node = head.link;
+			while (node.link is not null)
+			{
+				if (node.link.info == info)
+					break;
+				node = node.link;
+			}
+
+			if (node is null)
+			{
+				Console.WriteLine($"{info} is not present in the list.");
+			}
+			else
+			{
+				node.link = node?.link?.link;
+			}
+		}
 	}
 }
