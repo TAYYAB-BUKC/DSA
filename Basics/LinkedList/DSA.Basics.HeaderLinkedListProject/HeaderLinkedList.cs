@@ -99,5 +99,20 @@
 				node.link = node?.link?.link;
 			}
 		}
+
+		public void Reverse()
+		{
+			Node previous, node, next;
+			previous = null!;
+			node = head.link;
+			while (node != null)
+			{
+				next = node.link;
+				node.link = previous;
+				previous = node;
+				node = next;
+			}
+			head.link = previous;
+		}
 	}
 }
