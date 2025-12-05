@@ -80,6 +80,14 @@
 			}
 		}
 
+		public void CreateList(int numberOfNodes)
+		{
+			for (int i = 0; i < numberOfNodes; i++)
+			{
+				InsertAtEnd(new Random().Next(i, 1000));
+			}
+		}
+
 		public void DeleteNode(int info)
 		{
 			Node node = head.link;
