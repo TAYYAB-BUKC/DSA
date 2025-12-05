@@ -1,43 +1,27 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using DSA.Basics.HeaderLinkedListProject;
 
-using DSA.Basics.HeaderLinkedListProject;
+int choice, data, info, position;
 
-HeaderLinkedList list = new HeaderLinkedList();
+HeaderLinkedList List = new HeaderLinkedList();
 
-list.CreateList(5);
-list.DisplayList();
+while (true)
+{
+	Console.WriteLine("0. Create list"); 
+	Console.WriteLine("1. Display list");
+	Console.WriteLine("2. Insert a node at the end of the list");
+	Console.WriteLine("3. Insert a new node before a node");
+	Console.WriteLine("4. Insert at a given position");
+	Console.WriteLine("5. Delete a node");
+	Console.WriteLine("6. Reverse the list");
+	Console.WriteLine("7. Quit");
+	Console.Write("Enter your choice : ");
+	choice = Convert.ToInt32(Console.ReadLine());
 
-list.InsertAtBeginning(25);
-list.InsertAtBeginning(15);
-list.InsertAtBeginning(10);
-list.InsertAtBeginning(5);
+	if (choice == 7)
+		break;
 
-list.DisplayList();
-
-list.InsertBefore(25, 20);
-
-list.DisplayList();
-
-list.InsertBefore(5, 0);
-
-list.DisplayList();
-
-list.InsertAtEnd(30);
-list.InsertAtEnd(35);
-list.InsertAtEnd(40);
-
-list.DisplayList();
-
-list.InsertAtPosition(-15,0);
-list.DisplayList();
-list.InsertAtPosition(-10, 0);
-list.DisplayList();
-list.InsertAtPosition(-05, 0);
-list.DisplayList();
-list.InsertAtPosition(450, 450);
-list.DisplayList();
-
-list.Reverse();
-list.DisplayList();
-
-Console.ReadKey();
+	switch (choice)
+	{
+		
+	}
+}
