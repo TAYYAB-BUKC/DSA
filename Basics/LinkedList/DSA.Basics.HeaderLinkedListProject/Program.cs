@@ -37,5 +37,7 @@ list.DisplayList();
 list.InsertAtPosition(450, 450);
 list.DisplayList();
 
+list.Reverse();
+list.DisplayList();
 
 Console.ReadKey();
