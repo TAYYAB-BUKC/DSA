@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.CircularLinkedLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.HeaderLinkedListProject", "Basics\LinkedList\DSA.Basics.HeaderLinkedListProject\DSA.Basics.HeaderLinkedListProject.csproj", "{7B2E24F8-5998-46B6-9DC3-EB89E87D2B86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.SortedLinkedListProject", "Basics\LinkedList\DSA.Basics.SortedLinkedListProject\DSA.Basics.SortedLinkedListProject.csproj", "{D446D51E-0E0C-495D-A05C-5543EEAFBF32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7B2E24F8-5998-46B6-9DC3-EB89E87D2B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B2E24F8-5998-46B6-9DC3-EB89E87D2B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B2E24F8-5998-46B6-9DC3-EB89E87D2B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D446D51E-0E0C-495D-A05C-5543EEAFBF32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D446D51E-0E0C-495D-A05C-5543EEAFBF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D446D51E-0E0C-495D-A05C-5543EEAFBF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D446D51E-0E0C-495D-A05C-5543EEAFBF32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{667D526F-3B7F-4695-B5E0-143A63D96E7E} = {BD1E9081-4CBB-4D5B-85EF-0387AB44DADC}
 		{FB03B87A-E67C-41DA-BA05-29B39AC3969D} = {BD1E9081-4CBB-4D5B-85EF-0387AB44DADC}
 		{7B2E24F8-5998-46B6-9DC3-EB89E87D2B86} = {BD1E9081-4CBB-4D5B-85EF-0387AB44DADC}
+		{D446D51E-0E0C-495D-A05C-5543EEAFBF32} = {BD1E9081-4CBB-4D5B-85EF-0387AB44DADC}
 	EndGlobalSection
 EndGlobal
