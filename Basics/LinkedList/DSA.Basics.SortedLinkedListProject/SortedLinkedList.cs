@@ -30,5 +30,23 @@
 			newNode.link = node.link;
 			node.link = newNode;
 		}
+
+		public void DisplayList()
+		{
+			if (start == null)
+			{
+				Console.WriteLine("List is empty");
+				return;
+			}
+
+			Node node = start;
+			while (node != null)
+			{
+				Console.Write($"{node.info}\t");
+				node = node.link;
+			}
+			
+			Console.WriteLine("");
+		}
 	}
 }

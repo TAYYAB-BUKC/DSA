@@ -5,6 +5,8 @@ int numberOfNodes, data;
 
 SortedLinkedList list = new();
 
+list.DisplayList();
+
 Console.Write("Enter the number of nodes : ");
 numberOfNodes = Convert.ToInt32(Console.ReadLine());
 
@@ -17,3 +19,5 @@ for (int i = 1; i <= numberOfNodes; i++)
 	data = Convert.ToInt32(Console.ReadLine());
 	list.InsertInOrder(data);
 }
+
+list.DisplayList();
