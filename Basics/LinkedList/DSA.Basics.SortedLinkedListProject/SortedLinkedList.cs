@@ -48,5 +48,15 @@
 			
 			Console.WriteLine("");
 		}
+
+		public void CreateList(int numberOfNodes)
+		{
+			for (int index = 0; index < numberOfNodes; index++)
+			{
+				InsertInOrder(new Random().Next(0, 1000));
+			}
+			
+			Console.WriteLine();
+		}
 	}
 }
