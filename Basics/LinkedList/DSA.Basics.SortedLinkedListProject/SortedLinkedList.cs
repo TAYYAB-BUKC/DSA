@@ -77,7 +77,7 @@
 				node = node.link;
 			}
 
-			if (node is not null || node?.info != info)
+			if (node is not null && node?.info != info)
 				Console.WriteLine($"{info} is not found in the list.");
 			else
 				Console.WriteLine($"{info} is found at position {position} in the list.");
