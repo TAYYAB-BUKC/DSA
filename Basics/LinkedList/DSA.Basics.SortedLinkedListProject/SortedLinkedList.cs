@@ -58,5 +58,29 @@
 			
 			Console.WriteLine();
 		}
+
+		public void Search(int info)
+		{
+			if (start is null)
+			{
+				Console.WriteLine("List is empty.");
+				return;
+			}
+
+			Node node = start;
+			int position = 1;
+			while (node is not null && node.info <= info)
+			{
+				if (node.info == info)
+					break;
+				position++;
+				node = node.link;
+			}
+
+			if (node is not null && node?.info != info)
+				Console.WriteLine($"{info} is not found in the list.");
+			else
+				Console.WriteLine($"{info} is found at position {position} in the list.");
+		}
 	}
 }
