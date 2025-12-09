@@ -1,12 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DSA.Basics.StackArrayProject
+﻿namespace DSA.Basics.StackArrayProject
 {
-	internal class Stack
+	public class Stack
 	{
+		private int[] stackArray;
+		private int top;
+
+		public Stack()
+		{
+			stackArray = new int[10];
+			top = -1;
+		}
+
+		public Stack(int maxSize)
+		{
+			stackArray = new int[maxSize];
+			top = -1;
+		}
+
+		public int Size()
+		{
+			return top + 1;
+		}
+
+		public bool IsEmpty()
+		{
+			return (top == -1);
+		}
 	}
 }
