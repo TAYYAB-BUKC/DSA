@@ -1,0 +1,35 @@
+﻿namespace DSA.Basics.StackArrayProject
+{
+	public class Stack
+	{
+		private int[] stackArray;
+		private int top;
+
+		public Stack()
+		{
+			stackArray = new int[10];
+			top = -1;
+		}
+
+		public Stack(int maxSize)
+		{
+			stackArray = new int[maxSize];
+			top = -1;
+		}
+
+		public int Size()
+		{
+			return top + 1;
+		}
+
+		public bool IsEmpty()
+		{
+			return (top == -1);
+		}
+
+		public bool IsFull()
+		{
+			return (top == stackArray.Length - 1);
+		}
+	}
+}
