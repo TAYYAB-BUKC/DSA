@@ -31,5 +31,16 @@
 		{
 			return (top == stackArray.Length - 1);
 		}
+
+		public void Push(int value)
+		{
+			if (IsFull())
+			{
+				Console.WriteLine("Stack is in Overflow state");
+				return;
+			}
+			top++;
+			stackArray[top] = value;
+		}
 	}
 }
