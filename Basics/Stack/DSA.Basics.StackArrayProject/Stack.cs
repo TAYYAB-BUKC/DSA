@@ -42,5 +42,18 @@
 			top++;
 			stackArray[top] = value;
 		}
+
+		public int Pop()
+		{
+			int value;
+			if (IsEmpty())
+			{
+				Console.WriteLine("Stack is in Underflow state");
+				return -1;
+			}
+			value = stackArray[top];
+			top--;
+			return value;
+		}
 	}
 }
