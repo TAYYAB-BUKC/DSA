@@ -55,5 +55,30 @@
 			top--;
 			return value;
 		}
+
+		public int Peek()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine("Stack is in Underflow state");
+				return -1;
+			}
+			return stackArray[top];
+		}
+
+		public void Display()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine("Stack is in Underflow state");
+				return;
+			}
+
+			Console.WriteLine("Stack is : ");
+			for (int i = top; i >= 0; i--)
+				Console.Write(stackArray[i] + "\t");
+
+			Console.WriteLine();
+		}
 	}
 }
