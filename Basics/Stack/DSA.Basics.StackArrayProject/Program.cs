@@ -20,7 +20,30 @@ while (true)
 
 	switch (choice)
 	{
-		
+		case 1:
+			Console.Write("Enter the element to be pushed : ");
+			info = Convert.ToInt32(Console.ReadLine());
+			stack.Push(info);
+			break;
+		case 2:
+			info = stack.Pop();
+			if(info != -1)
+				Console.WriteLine("Popped element is : " + info);
+			break;
+		case 3:
+			info = stack.Peek();
+			if (info != -1)
+				Console.WriteLine("Element at the top is : " + info);
+			break;
+		case 4:
+			stack.Display();
+			break;
+		case 5:
+			Console.WriteLine("Size of stack " + stack.Size());
+			break;
+		default:
+			Console.WriteLine("Wrong choice");
+			break;
 	}
 	Console.WriteLine("");
 }
