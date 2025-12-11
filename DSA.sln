@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stack", "Stack", "{3AF81D77
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.StackArrayProject", "Basics\Stack\DSA.Basics.StackArrayProject\DSA.Basics.StackArrayProject.csproj", "{B2BF3443-AC8D-4843-8B3E-EDF5FE040E84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.StackLinkedListProject", "Basics\Stack\DSA.Basics.StackLinkedListProject\DSA.Basics.StackLinkedListProject.csproj", "{B0380E7E-E649-401C-9084-B82B8A2695E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{B2BF3443-AC8D-4843-8B3E-EDF5FE040E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2BF3443-AC8D-4843-8B3E-EDF5FE040E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2BF3443-AC8D-4843-8B3E-EDF5FE040E84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0380E7E-E649-401C-9084-B82B8A2695E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0380E7E-E649-401C-9084-B82B8A2695E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0380E7E-E649-401C-9084-B82B8A2695E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0380E7E-E649-401C-9084-B82B8A2695E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,5 +73,6 @@ Global
 		{D446D51E-0E0C-495D-A05C-5543EEAFBF32} = {BD1E9081-4CBB-4D5B-85EF-0387AB44DADC}
 		{3AF81D77-4A51-43ED-BB03-A495B6FBABFF} = {356E900C-313E-4043-8204-5D3282A9BB78}
 		{B2BF3443-AC8D-4843-8B3E-EDF5FE040E84} = {3AF81D77-4A51-43ED-BB03-A495B6FBABFF}
+		{B0380E7E-E649-401C-9084-B82B8A2695E3} = {3AF81D77-4A51-43ED-BB03-A495B6FBABFF}
 	EndGlobalSection
 EndGlobal
