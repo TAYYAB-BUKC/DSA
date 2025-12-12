@@ -27,5 +27,19 @@
 			node.link = top;
 			top = node;
 		}
+
+		public int Pop(int info)
+		{
+			int value;
+			if (IsEmpty())
+			{
+				Console.WriteLine("Stack is in Underflow state");
+				return -1;
+			}
+
+			value = top.info;
+			top = top.link;
+			return value;
+		}
 	}
 }
