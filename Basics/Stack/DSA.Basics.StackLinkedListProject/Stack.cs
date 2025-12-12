@@ -52,5 +52,22 @@
 
 			return top.info;
 		}
+
+		public void Display()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine("Stack is in Underflow state");
+				return;
+			}
+
+			Node node = top;
+			while (node != null)
+			{
+				Console.Write($"{node.info}\t");
+				node = node.link;
+			}
+			Console.WriteLine();
+		}
 	}
 }
