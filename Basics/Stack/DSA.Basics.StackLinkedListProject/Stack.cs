@@ -20,5 +20,12 @@
 		{
 			return top is null;
 		}
+
+		public void Push(int info)
+		{
+			Node node = new Node(info);
+			node.link = top;
+			top = node;
+		}
 	}
 }
