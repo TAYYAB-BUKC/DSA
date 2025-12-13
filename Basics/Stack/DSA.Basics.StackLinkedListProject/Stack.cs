@@ -28,7 +28,7 @@
 			top = node;
 		}
 
-		public int Pop(int info)
+		public int Pop()
 		{
 			int value;
 			if (IsEmpty())
