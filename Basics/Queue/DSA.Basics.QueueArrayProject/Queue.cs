@@ -38,7 +38,7 @@
 				return rear - front + 1;
 		}
 
-		public void Insert(int value)
+		public void Enqueue(int value)
 		{
 			if (IsFull())
 			{
@@ -49,6 +49,20 @@
 				front = 0;
 			rear++;
 			queueArray[rear] = value;
+		}
+
+		public int Dequeue()
+		{
+			int value;
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return -1;
+			}
+
+			value = queueArray[front];
+			front = front + 1;
+			return value;
 		}
 	}
 }
