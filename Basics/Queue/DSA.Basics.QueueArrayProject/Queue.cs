@@ -37,5 +37,18 @@
 			else
 				return rear - front + 1;
 		}
+
+		public void Insert(int value)
+		{
+			if (IsFull())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in overflow state");
+				return;
+			}
+			if (front == -1)
+				front = 0;
+			rear++;
+			queueArray[rear] = value;
+		}
 	}
 }
