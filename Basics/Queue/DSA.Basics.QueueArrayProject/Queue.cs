@@ -29,5 +29,13 @@
 		{
 			return (rear == queueArray.Length - 1);
 		}
+
+		public int Size()
+		{
+			if (IsEmpty())
+				return 0;
+			else
+				return rear - front + 1;
+		}
 	}
 }
