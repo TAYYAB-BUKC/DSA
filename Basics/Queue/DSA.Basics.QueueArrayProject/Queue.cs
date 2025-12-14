@@ -64,5 +64,15 @@
 			front = front + 1;
 			return value;
 		}
+
+		public int Peek()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return -1;
+			}
+			return queueArray[front];
+		}
 	}
 }
