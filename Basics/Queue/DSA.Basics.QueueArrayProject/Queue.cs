@@ -37,5 +37,42 @@
 			else
 				return rear - front + 1;
 		}
+
+		public void Enqueue(int value)
+		{
+			if (IsFull())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in overflow state");
+				return;
+			}
+			if (front == -1)
+				front = 0;
+			rear++;
+			queueArray[rear] = value;
+		}
+
+		public int Dequeue()
+		{
+			int value;
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return -1;
+			}
+
+			value = queueArray[front];
+			front = front + 1;
+			return value;
+		}
+
+		public int Peek()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return -1;
+			}
+			return queueArray[front];
+		}
 	}
 }
