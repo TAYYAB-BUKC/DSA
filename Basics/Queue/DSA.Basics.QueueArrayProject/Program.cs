@@ -2,7 +2,7 @@
 
 int choice, info;
 
-Queue queue = new(8);
+Queue queue = new(10);
 
 while (true)
 {
@@ -19,7 +19,30 @@ while (true)
 
 	switch (choice)
 	{
-		
+		case 1:
+			Console.Write("Enter the element to be inserted : ");
+			info = Convert.ToInt32(Console.ReadLine());
+			queue.Enqueue(info);
+			break;
+		case 2:
+			info = queue.Dequeue();
+			if (info != -1)
+				Console.WriteLine("Popped element is : " + info);
+			break;
+		case 3:
+			info = queue.Peek();
+			if (info != -1)
+				Console.WriteLine("Element at the front is : " + info);
+			break;
+		case 4:
+			queue.Display();
+			break;
+		case 5:
+			Console.WriteLine("Size of queue is " + queue.Size());
+			break;
+		default:
+			Console.WriteLine("Wrong choice");
+			break;
 	}
 	Console.WriteLine();
 }
