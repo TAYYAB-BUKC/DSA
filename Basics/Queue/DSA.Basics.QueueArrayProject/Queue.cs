@@ -74,5 +74,20 @@
 			}
 			return queueArray[front];
 		}
+
+		public void Display()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return;
+			}
+
+			Console.WriteLine("Queue is :\n\n");
+			for (int index = front; index <= rear; index++)
+				Console.Write($"{queueArray[index]}\t");
+
+			Console.WriteLine();
+		}
 	}
 }
