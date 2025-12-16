@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queue", "Queue", "{2AD6DDC9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.QueueArrayProject", "Basics\Queue\DSA.Basics.QueueArrayProject\DSA.Basics.QueueArrayProject.csproj", "{C1AFDB50-0509-4937-8EBA-B25F767425E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.QueueLinkedListProject", "Basics\Queue\DSA.Basics.QueueLinkedListProject\DSA.Basics.QueueLinkedListProject.csproj", "{411BF58B-3550-4A2A-8FEA-F825F88A6FCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{C1AFDB50-0509-4937-8EBA-B25F767425E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1AFDB50-0509-4937-8EBA-B25F767425E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1AFDB50-0509-4937-8EBA-B25F767425E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{411BF58B-3550-4A2A-8FEA-F825F88A6FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{411BF58B-3550-4A2A-8FEA-F825F88A6FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{411BF58B-3550-4A2A-8FEA-F825F88A6FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{411BF58B-3550-4A2A-8FEA-F825F88A6FCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,5 +90,6 @@ Global
 		{B0380E7E-E649-401C-9084-B82B8A2695E3} = {3AF81D77-4A51-43ED-BB03-A495B6FBABFF}
 		{2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4} = {356E900C-313E-4043-8204-5D3282A9BB78}
 		{C1AFDB50-0509-4937-8EBA-B25F767425E9} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
+		{411BF58B-3550-4A2A-8FEA-F825F88A6FCC} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
 	EndGlobalSection
 EndGlobal
