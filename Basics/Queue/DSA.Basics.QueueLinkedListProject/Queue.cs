@@ -22,5 +22,38 @@
 			}
 			return counter;
 		}
+
+		public bool IsEmpty()
+		{
+			return front is null;
+		}
+
+		public void Display()
+		{
+			Node node = front;
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is empty");
+				return;
+			}
+
+			Console.WriteLine("Queue is : ");
+			while (node != null)
+			{
+				Console.Write($"{node.info}\t");
+				node = node.link;
+			}
+			Console.WriteLine();
+		}
+
+		public int Peek()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return -1;
+			}
+			return front.info;
+		}
 	}
 }
