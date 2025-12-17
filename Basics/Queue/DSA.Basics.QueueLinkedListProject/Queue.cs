@@ -22,5 +22,10 @@
 			}
 			return counter;
 		}
+
+		public bool IsEmpty()
+		{
+			return front is null;
+		}
 	}
 }
