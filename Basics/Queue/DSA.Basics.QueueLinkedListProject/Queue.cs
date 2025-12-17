@@ -45,5 +45,15 @@
 			}
 			Console.WriteLine();
 		}
+
+		public int Peek()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return -1;
+			}
+			return front.info;
+		}
 	}
 }
