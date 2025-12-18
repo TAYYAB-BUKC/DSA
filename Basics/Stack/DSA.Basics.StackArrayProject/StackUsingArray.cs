@@ -1,17 +1,17 @@
 ﻿namespace DSA.Basics.StackArrayProject
 {
-	public class Stack
+	public class StackUsingArray
 	{
 		private int[] stackArray;
 		private int top;
 
-		public Stack()
+		public StackUsingArray()
 		{
 			stackArray = new int[10];
 			top = -1;
 		}
 
-		public Stack(int maxSize)
+		public StackUsingArray(int maxSize)
 		{
 			stackArray = new int[maxSize];
 			top = -1;
@@ -36,7 +36,7 @@
 		{
 			if (IsFull())
 			{
-				Console.WriteLine("Stack is in Overflow state");
+				Console.WriteLine("StackUsingArray is in Overflow state");
 				return;
 			}
 			top++;
@@ -48,7 +48,7 @@
 			int value;
 			if (IsEmpty())
 			{
-				Console.WriteLine("Stack is in Underflow state");
+				Console.WriteLine("StackUsingArray is in Underflow state");
 				return -1;
 			}
 			value = stackArray[top];
@@ -60,7 +60,7 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine("Stack is in Underflow state");
+				Console.WriteLine("StackUsingArray is in Underflow state");
 				return -1;
 			}
 			return stackArray[top];
@@ -70,11 +70,11 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine("Stack is in Underflow state");
+				Console.WriteLine("StackUsingArray is in Underflow state");
 				return;
 			}
 
-			Console.WriteLine("Stack is : ");
+			Console.WriteLine("StackUsingArray is : ");
 			for (int i = top; i >= 0; i--)
 				Console.Write(stackArray[i] + "\t");
 

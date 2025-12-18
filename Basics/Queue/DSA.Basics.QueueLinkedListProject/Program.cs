@@ -2,7 +2,7 @@
 
 int choice, info;
 
-Queue queue = new Queue();
+QueueUsingLinkedList queue = new();
 
 while (true)
 {
@@ -22,10 +22,10 @@ while (true)
 		case 1:
 			Console.Write("Enter the element to be inserted : ");
 			info = Convert.ToInt32(Console.ReadLine());
-			queue.Insert(info);
+			queue.Enqueue(info);
 			break;
 		case 2:
-			info = queue.Delete();
+			info = queue.Dequeue();
 			if (info != -1)
 				Console.WriteLine("Element deleted is : " + info);
 			break;

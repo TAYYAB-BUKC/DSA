@@ -2,7 +2,7 @@
 
 int choice, info;
 
-Stack stack = new(8);
+StackUsingArray stack = new(8);
 
 while (true)
 {

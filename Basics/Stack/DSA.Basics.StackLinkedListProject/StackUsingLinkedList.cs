@@ -1,6 +1,6 @@
 ﻿namespace DSA.Basics.StackLinkedListProject
 {
-	public class Stack
+	public class StackUsingLinkedList
 	{
 		public Node top { get; set; } = null!;
 
@@ -33,7 +33,7 @@
 			int value;
 			if (IsEmpty())
 			{
-				Console.WriteLine("Stack is in Underflow state");
+				Console.WriteLine("StackUsingLinkedList is in Underflow state");
 				return -1;
 			}
 
@@ -46,7 +46,7 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine("Stack is in Underflow state");
+				Console.WriteLine("StackUsingLinkedList is in Underflow state");
 				return -1;
 			}
 
@@ -57,7 +57,7 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine("Stack is in Underflow state");
+				Console.WriteLine("StackUsingLinkedList is in Underflow state");
 				return;
 			}
 
