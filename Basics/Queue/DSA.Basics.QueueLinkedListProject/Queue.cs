@@ -55,5 +55,17 @@
 			}
 			return front.info;
 		}
+
+		public void Insert(int info)
+		{
+			Node node = new Node(info);
+
+			if (front is null)
+				front = node;
+			else
+				rear.link = node;
+
+			rear = node;
+		}
 	}
 }
