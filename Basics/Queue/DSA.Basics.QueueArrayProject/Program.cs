@@ -2,7 +2,7 @@
 
 int choice, info;
 
-Queue queue = new(10);
+QueueUsingArray queue = new(10);
 
 while (true)
 {

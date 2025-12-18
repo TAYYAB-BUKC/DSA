@@ -2,7 +2,7 @@
 
 int choice, info;
 
-Stack stack = new();
+StackUsingLinkedList stack = new();
 
 while (true)
 {

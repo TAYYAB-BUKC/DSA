@@ -1,19 +1,19 @@
 ﻿namespace DSA.Basics.QueueArrayProject
 {
-	public class Queue
+	public class QueueUsingArray
 	{
 		private int[] queueArray;
 		private int front;
 		private int rear;
 
-		public Queue()
+		public QueueUsingArray()
 		{
 			queueArray = new int[10];
 			front = -1;
 			rear = -1;
 		}
 
-		public Queue(int size)
+		public QueueUsingArray(int size)
 		{
 			queueArray = new int[size];
 			front = -1;
@@ -42,7 +42,7 @@
 		{
 			if (IsFull())
 			{
-				Console.WriteLine($"{nameof(Queue)} is in overflow state");
+				Console.WriteLine($"{nameof(QueueUsingArray)} is in overflow state");
 				return;
 			}
 			if (front == -1)
@@ -56,7 +56,7 @@
 			int value;
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				Console.WriteLine($"{nameof(QueueUsingArray)} is in underflow state");
 				return -1;
 			}
 
@@ -69,7 +69,7 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				Console.WriteLine($"{nameof(QueueUsingArray)} is in underflow state");
 				return -1;
 			}
 			return queueArray[front];
@@ -79,11 +79,11 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				Console.WriteLine($"{nameof(QueueUsingArray)} is in underflow state");
 				return;
 			}
 
-			Console.WriteLine("Queue is :\n\n");
+			Console.WriteLine("QueueUsingArray is :\n\n");
 			for (int index = front; index <= rear; index++)
 				Console.Write($"{queueArray[index]}\t");
 

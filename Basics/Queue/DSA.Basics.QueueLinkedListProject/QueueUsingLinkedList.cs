@@ -1,11 +1,11 @@
 ﻿namespace DSA.Basics.QueueLinkedListProject
 {
-	public class Queue
+	public class QueueUsingLinkedList
 	{
 		private Node front;
 		private Node rear;
 
-		public Queue()
+		public QueueUsingLinkedList()
 		{
 			front = null!;
 			rear = null!;
@@ -33,11 +33,11 @@
 			Node node = front;
 			if (IsEmpty())
 			{
-				Console.WriteLine("Queue is empty");
+				Console.WriteLine("QueueUsingLinkedList is empty");
 				return;
 			}
 
-			Console.WriteLine("Queue is : ");
+			Console.WriteLine("QueueUsingLinkedList is : ");
 			while (node != null)
 			{
 				Console.Write($"{node.info}\t");
@@ -50,13 +50,13 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				Console.WriteLine($"{nameof(QueueUsingLinkedList)} is in underflow state");
 				return -1;
 			}
 			return front.info;
 		}
 
-		public void Insert(int info)
+		public void Enqueue(int info)
 		{
 			Node node = new Node(info);
 
@@ -68,12 +68,12 @@
 			rear = node;
 		}
 
-		public int Delete()
+		public int Dequeue()
 		{
 			int value;
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				Console.WriteLine($"{nameof(QueueUsingLinkedList)} is in underflow state");
 				return -1;
 			}
 
