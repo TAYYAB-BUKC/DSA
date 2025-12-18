@@ -19,7 +19,30 @@ while (true)
 
 	switch (choice)
 	{
-		
+		case 1:
+			Console.Write("Enter the element to be inserted : ");
+			info = Convert.ToInt32(Console.ReadLine());
+			queue.Insert(info);
+			break;
+		case 2:
+			info = queue.Delete();
+			if (info != -1)
+				Console.WriteLine("Element deleted is : " + info);
+			break;
+		case 3:
+			info = queue.Peek();
+			if (info != -1)
+				Console.WriteLine("Element at the front is : " + info);
+			break;
+		case 4:
+			queue.Display();
+			break;
+		case 5:
+			Console.WriteLine("Size of queue is " + queue.Size());
+			break;
+		default:
+			Console.WriteLine("Wrong choice");
+			break;
 	}
 	Console.WriteLine();
 }
