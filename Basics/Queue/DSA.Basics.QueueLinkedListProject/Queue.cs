@@ -55,5 +55,31 @@
 			}
 			return front.info;
 		}
+
+		public void Insert(int info)
+		{
+			Node node = new Node(info);
+
+			if (front is null)
+				front = node;
+			else
+				rear.link = node;
+
+			rear = node;
+		}
+
+		public int Delete()
+		{
+			int value;
+			if (IsEmpty())
+			{
+				Console.WriteLine($"{nameof(Queue)} is in underflow state");
+				return -1;
+			}
+
+			value = front.info;
+			front = front.link;
+			return value;
+		}
 	}
 }
