@@ -23,5 +23,33 @@
 			} while (node != rear.link);
 			return counter;
 		}
+
+		public void Display()
+		{
+			Node node = rear.link;
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is empty");
+				return;
+			}
+
+			Console.WriteLine("Queue is : ");
+			do
+			{
+				Console.Write($"{node.info}\t");
+				node = node.link;
+			} while (node != rear.link);
+			Console.WriteLine();
+		}
+
+		public int Peek()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is in underflow state");
+				return -1;
+			}
+			return rear.link.info;
+		}
 	}
 }
