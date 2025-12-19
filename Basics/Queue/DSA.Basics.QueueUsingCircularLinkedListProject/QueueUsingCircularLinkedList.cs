@@ -68,5 +68,27 @@
 				rear = newNode;
 			}
 		}
+
+		public int Delete()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is in underflow state");
+				return -1;
+			}
+
+			Node node;
+			if (rear.link == rear)
+			{
+				node = rear;
+				rear = null!;
+			}
+			else
+			{
+				node = rear.link;
+				rear.link = node.link;
+			}
+			return node.info;
+		}
 	}
 }
