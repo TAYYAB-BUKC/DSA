@@ -51,5 +51,22 @@
 			}
 			return rear.link.info;
 		}
+
+		public void Insert(int info)
+		{
+			Node newNode = new Node(info);
+
+			if (IsEmpty())
+			{
+				rear = newNode;
+				rear.link = rear;
+			}
+			else
+			{
+				newNode.link = rear.link;
+				rear.link = newNode;
+				rear = newNode;
+			}
+		}
 	}
 }
