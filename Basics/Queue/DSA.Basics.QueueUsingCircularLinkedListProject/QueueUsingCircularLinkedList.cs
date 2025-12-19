@@ -29,7 +29,7 @@
 			Node node = rear.link;
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(QueueUsingCircularLinkedList)} is empty");
+				Console.WriteLine("Queue is empty");
 				return;
 			}
 
@@ -40,6 +40,16 @@
 				node = node.link;
 			} while (node != rear.link);
 			Console.WriteLine();
+		}
+
+		public int Peek()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is in underflow state");
+				return -1;
+			}
+			return rear.link.info;
 		}
 	}
 }
