@@ -52,7 +52,7 @@
 			return rear.link.info;
 		}
 
-		public void Insert(int info)
+		public void Enqueue(int info)
 		{
 			Node newNode = new Node(info);
 
@@ -69,7 +69,7 @@
 			}
 		}
 
-		public int Delete()
+		public int Dequeue()
 		{
 			if (IsEmpty())
 			{
