@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.QueueLinkedListP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.QueueUsingCircularLinkedListProject", "Basics\Queue\DSA.Basics.QueueUsingCircularLinkedListProject\DSA.Basics.QueueUsingCircularLinkedListProject.csproj", "{7ACCE7BF-95F6-469C-A944-CF8229CE5BA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.CircularQueueArrayProject", "Basics\Queue\DSA.Basics.CircularQueueArrayProject\DSA.Basics.CircularQueueArrayProject.csproj", "{08425AEC-22DF-465A-8328-3FC5EB8998DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{7ACCE7BF-95F6-469C-A944-CF8229CE5BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ACCE7BF-95F6-469C-A944-CF8229CE5BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ACCE7BF-95F6-469C-A944-CF8229CE5BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08425AEC-22DF-465A-8328-3FC5EB8998DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08425AEC-22DF-465A-8328-3FC5EB8998DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08425AEC-22DF-465A-8328-3FC5EB8998DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08425AEC-22DF-465A-8328-3FC5EB8998DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,5 +104,6 @@ Global
 		{C1AFDB50-0509-4937-8EBA-B25F767425E9} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
 		{411BF58B-3550-4A2A-8FEA-F825F88A6FCC} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
 		{7ACCE7BF-95F6-469C-A944-CF8229CE5BA6} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
+		{08425AEC-22DF-465A-8328-3FC5EB8998DA} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
 	EndGlobalSection
 EndGlobal
