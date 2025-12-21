@@ -64,5 +64,22 @@
 			}
 			return size;
 		}
+
+		public void Enqueue(int info)
+		{
+			if (IsFull())
+			{
+				Console.WriteLine($"Queue is in overflow state");
+				return;
+			}
+			if (front == -1)
+				front = 0;
+
+			if (rear == queueArray.Length - 1)
+				rear = 0;
+			else
+				rear = rear + 1;
+			queueArray[rear] = info;
+		}
 	}
 }
