@@ -29,5 +29,40 @@
 		{
 			return (front == 0 && rear == queueArray.Length - 1) || front == rear + 1;
 		}
+
+		public int Size()
+		{
+			if (IsEmpty())
+				return 0;
+
+			if (IsFull())
+				return queueArray.Length;
+
+			int index = front;
+			int size = 0;
+			if (front <= rear)
+			{
+				while (index <= rear)
+				{
+					size++;
+					index++;
+				}
+			}
+			else
+			{
+				while (index <= queueArray.Length - 1)
+				{
+					size++;
+					index++;
+				}
+				index = 0;
+				while (index <= rear)
+				{
+					size++;
+					index++;
+				}
+			}
+			return size;
+		}
 	}
 }
