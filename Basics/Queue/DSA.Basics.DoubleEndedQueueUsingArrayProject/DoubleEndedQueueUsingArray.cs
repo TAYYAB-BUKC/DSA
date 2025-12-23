@@ -29,5 +29,38 @@
 		{
 			return (front == 0 && rear == queueArray.Length - 1) || (front == rear + 1);
 		}
+
+		public void Display()
+		{
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is in underflow state");
+				return;
+			}
+
+			int index = front;
+			Console.WriteLine("Queue is : ");
+			if (front <= rear)
+			{
+				while (index <= rear)
+				{
+					Console.Write($"{queueArray[index++]}\t");
+				}
+			}
+			else
+			{
+				while (index <= queueArray.Length - 1)
+				{
+					Console.Write($"{queueArray[index++]}\t");
+				}
+				index = 0;
+				while (index <= rear)
+				{
+					Console.Write($"{queueArray[index++]}\t");
+				}
+			}
+
+			Console.WriteLine();
+		}
 	}
 }
