@@ -20,6 +20,31 @@ while (true)
 
 	switch (choice)
 	{
-		
+		case 1:
+			Console.Write("Enter the element to be inserted : ");
+			info = Convert.ToInt32(Console.ReadLine());
+			doubleEndedQueue.InsertFront(info);
+			break;
+		case 2:
+			Console.Write("Enter the element to be inserted : ");
+			info = Convert.ToInt32(Console.ReadLine());
+			doubleEndedQueue.InsertRear(info);
+			break;
+		case 3:
+			info = doubleEndedQueue.DeleteFront();
+			if (info != -1)
+				Console.WriteLine("Element deleted from front end is " + info);
+			break;
+		case 4:
+			info = doubleEndedQueue.DeleteRear();
+			if (info != -1)
+				Console.WriteLine("Element deleted from rear end is  " + info);
+			break;
+		case 5:
+			doubleEndedQueue.Display();
+			break;
+		default:
+			Console.WriteLine("Wrong choice");
+			break;
 	}
 }
