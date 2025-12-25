@@ -126,5 +126,29 @@
 			
 			return info;
 		}
+
+		public int DeleteRear()
+		{
+			int info;
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is in underflow state");
+				return -1;
+			}
+
+			info = queueArray[rear];
+
+			if (front == rear)
+			{
+				front = -1;
+				rear = -1;
+			}
+			else if (rear == 0)
+				rear = queueArray.Length - 1;
+			else
+				rear = rear - 1;
+			
+			return info;
+		}
 	}
 }
