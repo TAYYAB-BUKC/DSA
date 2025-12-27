@@ -17,6 +17,23 @@ while (true)
 
 	switch (choice)
 	{
-		
+		case 1:
+			Console.WriteLine("Enter the element to be inserted : ");
+			element = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Enter its priority : ");
+			elementPriority = Convert.ToInt32(Console.ReadLine());
+			priorityQueueUsingLinkedList.Insert(element, elementPriority);
+			break;
+		case 2:
+			element = priorityQueueUsingLinkedList.Delete();
+			if (element != -1)
+				Console.WriteLine("Deleted element is : " + element);
+			break;
+		case 3:
+			priorityQueueUsingLinkedList.Display();
+			break;
+		default:
+			Console.WriteLine("Wrong choice");
+			break;
 	}
 }
