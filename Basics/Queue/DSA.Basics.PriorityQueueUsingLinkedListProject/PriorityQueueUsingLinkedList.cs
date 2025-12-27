@@ -52,5 +52,21 @@
 				node.link = newNode;
 			}
 		}
+
+		public int Delete()
+		{
+			int value;
+			if (IsEmpty())
+			{
+				Console.WriteLine("Queue is in underflow state");
+				return;
+			}
+			else
+			{
+				value = front.info;
+				front = front.link;
+			}
+			return value;
+		}
 	}
 }
