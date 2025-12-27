@@ -59,7 +59,7 @@
 			if (IsEmpty())
 			{
 				Console.WriteLine("Queue is in underflow state");
-				return;
+				return -1;
 			}
 			else
 			{
