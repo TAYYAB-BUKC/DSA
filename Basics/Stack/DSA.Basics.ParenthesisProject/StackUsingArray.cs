@@ -16,5 +16,15 @@
 			stackArray = new int[maxSize];
 			top = -1;
 		}
+
+		public int Size()
+		{
+			return top + 1;
+		}
+
+		public bool IsEmpty()
+		{
+			return top == -1;
+		}
 	}
 }
