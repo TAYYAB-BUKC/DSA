@@ -26,5 +26,10 @@
 		{
 			return top == -1;
 		}
+
+		public bool IsFull()
+		{
+			return top == stackArray.Length - 1;
+		}
 	}
 }
