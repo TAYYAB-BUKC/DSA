@@ -2,18 +2,18 @@
 {
 	public class StackUsingArray
 	{
-		private int[] stackArray;
+		private char[] stackArray;
 		private int top;
 
 		public StackUsingArray()
 		{
-			stackArray = new int[10];
+			stackArray = new char[10];
 			top = -1;
 		}
 
 		public StackUsingArray(int maxSize)
 		{
-			stackArray = new int[maxSize];
+			stackArray = new char[maxSize];
 			top = -1;
 		}
 
@@ -32,7 +32,7 @@
 			return top == stackArray.Length - 1;
 		}
 
-		public void Push(int value)
+		public void Push(char value)
 		{
 			if (IsFull())
 			{
@@ -43,13 +43,13 @@
 			stackArray[top] = value;
 		}
 
-		public int Pop()
+		public char? Pop()
 		{
-			int value;
+			char? value;
 			if (IsEmpty())
 			{
 				Console.WriteLine("Stack is in Underflow state");
-				return -1;
+				return null!;
 			}
 			value = stackArray[top];
 			top--;
