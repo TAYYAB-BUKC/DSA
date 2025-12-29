@@ -2,18 +2,18 @@
 {
 	public class StackUsingArray
 	{
-		private int[] stackArray;
+		private char[] stackArray;
 		private int top;
 
 		public StackUsingArray()
 		{
-			stackArray = new int[10];
+			stackArray = new char[10];
 			top = -1;
 		}
 
 		public StackUsingArray(int maxSize)
 		{
-			stackArray = new int[maxSize];
+			stackArray = new char[maxSize];
 			top = -1;
 		}
 
