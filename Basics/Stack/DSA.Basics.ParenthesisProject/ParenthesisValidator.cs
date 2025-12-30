@@ -2,7 +2,7 @@
 {
 	public class ParenthesisValidator
 	{
-		static bool AreParenthesisMatch(char leftParenthesis, char rightParenthesis)
+		public static bool AreParenthesisMatch(char leftParenthesis, char rightParenthesis)
 		{
 			if (leftParenthesis == '[' && rightParenthesis == ']')
 				return true;
@@ -13,7 +13,7 @@
 			return false;
 		}
 
-		static bool IsValid(string expression)
+		public static bool IsValid(string expression)
 		{
 			StackUsingArray stack = new();
 
