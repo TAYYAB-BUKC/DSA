@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.PriorityQueueUsi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.ParenthesisProject", "Basics\Stack\DSA.Basics.ParenthesisProject\DSA.Basics.ParenthesisProject.csproj", "{E7377D08-0AB3-4BAD-AC3F-710B50BA531C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.PostfixProject", "Basics\Stack\DSA.Basics.PostfixProject\DSA.Basics.PostfixProject.csproj", "{D223ABFA-5327-405B-8DF5-1AFF2A2F587A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,10 @@ Global
 		{E7377D08-0AB3-4BAD-AC3F-710B50BA531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7377D08-0AB3-4BAD-AC3F-710B50BA531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7377D08-0AB3-4BAD-AC3F-710B50BA531C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D223ABFA-5327-405B-8DF5-1AFF2A2F587A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D223ABFA-5327-405B-8DF5-1AFF2A2F587A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D223ABFA-5327-405B-8DF5-1AFF2A2F587A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D223ABFA-5327-405B-8DF5-1AFF2A2F587A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,5 +132,6 @@ Global
 		{1A0419FE-512F-42B3-BCD2-B89BDEF36CE8} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
 		{D6DA5E6B-4913-4438-AB80-D5229F7157E7} = {2AD6DDC9-04C8-4E3D-95BA-CC6EFC220EC4}
 		{E7377D08-0AB3-4BAD-AC3F-710B50BA531C} = {3AF81D77-4A51-43ED-BB03-A495B6FBABFF}
+		{D223ABFA-5327-405B-8DF5-1AFF2A2F587A} = {3AF81D77-4A51-43ED-BB03-A495B6FBABFF}
 	EndGlobalSection
 EndGlobal
