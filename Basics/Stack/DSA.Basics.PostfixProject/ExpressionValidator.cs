@@ -21,5 +21,19 @@
                     return 0;
             }
         }
+
+        public static int EvaluatePower(int baseValue, int exponent)
+        {
+            if (exponent < 0)
+                throw new ArgumentException("Exponent must be non-negative");
+
+            if (exponent == 0)
+                return 1;
+
+            int index, power = 1;
+            for (index = 1; index <= exponent; index++)
+                power *= baseValue;
+            return power;
+        }
     }
 }
