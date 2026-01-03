@@ -42,7 +42,7 @@
 		{
 			if (IsFull())
 			{
-				Console.WriteLine($"{nameof(QueueUsingArray)} is in overflow state");
+				Console.WriteLine("Queue is in overflow state");
 				return;
 			}
 			if (front == -1)
@@ -56,7 +56,7 @@
 			int value;
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(QueueUsingArray)} is in underflow state");
+				Console.WriteLine("Queue is in underflow state");
 				return -1;
 			}
 
@@ -69,7 +69,7 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(QueueUsingArray)} is in underflow state");
+				Console.WriteLine("Queue is in underflow state");
 				return -1;
 			}
 			return queueArray[front];
@@ -79,11 +79,11 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine($"{nameof(QueueUsingArray)} is in underflow state");
+				Console.WriteLine("Queue is in underflow state");
 				return;
 			}
 
-			Console.WriteLine("QueueUsingArray is :\n\n");
+			Console.WriteLine("Queue is :\n\n");
 			for (int index = front; index <= rear; index++)
 				Console.Write($"{queueArray[index]}\t");
 
