@@ -36,7 +36,7 @@
             return power;
         }
 
-        public static String ConvertInfixExpressionToPostfixExpression(string infixExpression)
+        public static string ConvertInfixExpressionToPostfixExpression(string infixExpression)
         {
             string postfix = "";
 
