@@ -79,5 +79,39 @@
                 postfix = postfix + stack.Pop();
             return postfix;
         }
+
+        public static int EvaluatePostfixExpression(string postfixExpression)
+        {
+            NumberStackUsingArray stack = new(postfixExpression.Length);
+
+            int x, y;
+            for (int i = 0; i < postfixExpression.Length; i++)
+            {
+                if (Char.IsDigit(postfixExpression[i]))
+                    stack.Push(Convert.ToInt32(Char.GetNumericValue(postfixExpression[i])));
+                else
+                {
+                    x = stack.Pop();
+                    y = stack.Pop();
+                    switch (postfixExpression[i])
+                    {
+                        case '+':
+                            stack.Push(y + x); break;
+                        case '-':
+                            stack.Push(y - x); break;
+                        case '*':
+                            stack.Push(y * x); break;
+                        case '/':
+                            stack.Push(y / x); break;
+                        case '%':
+                            stack.Push(y % x); break;
+                        case '^':
+                            stack.Push(EvaluatePower(y, x));
+                            break;
+                    }
+                }
+            }
+            return stack.Pop();
+        }
     }
 }
