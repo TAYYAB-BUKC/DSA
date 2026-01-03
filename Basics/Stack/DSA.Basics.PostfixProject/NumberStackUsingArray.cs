@@ -74,7 +74,7 @@
 				return;
 			}
 
-			Console.WriteLine("StackUsingArray is : ");
+			Console.WriteLine("Stack is : ");
 			for (int i = top; i >= 0; i--)
 				Console.Write(stackArray[i] + "\t");
 

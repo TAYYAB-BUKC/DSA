@@ -36,7 +36,7 @@
 		{
 			if (IsFull())
 			{
-				Console.WriteLine("StackUsingArray is in Overflow state");
+				Console.WriteLine("Stack is in Overflow state");
 				return;
 			}
 			top++;
@@ -48,7 +48,7 @@
 			int value;
 			if (IsEmpty())
 			{
-				Console.WriteLine("StackUsingArray is in Underflow state");
+				Console.WriteLine("Stack is in Underflow state");
 				return -1;
 			}
 			value = stackArray[top];
@@ -60,7 +60,7 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine("StackUsingArray is in Underflow state");
+				Console.WriteLine("Stack is in Underflow state");
 				return -1;
 			}
 			return stackArray[top];
@@ -70,11 +70,11 @@
 		{
 			if (IsEmpty())
 			{
-				Console.WriteLine("StackUsingArray is in Underflow state");
+				Console.WriteLine("Stack is in Underflow state");
 				return;
 			}
 
-			Console.WriteLine("StackUsingArray is : ");
+			Console.WriteLine("Stack is : ");
 			for (int i = top; i >= 0; i--)
 				Console.Write(stackArray[i] + "\t");
 
