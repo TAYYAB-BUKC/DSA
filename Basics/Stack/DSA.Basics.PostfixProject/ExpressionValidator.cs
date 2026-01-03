@@ -35,5 +35,49 @@
                 power *= baseValue;
             return power;
         }
+
+        public static String ConvertInfixExpressionToPostfixExpression(string infixExpression)
+        {
+            string postfix = "";
+
+            CharacterStackUsingArray stack = new(infixExpression.Length);
+
+            char next, symbol;
+
+            for (int index = 0; index < infixExpression.Length; index++)
+            {
+                symbol = infixExpression[index];
+
+                if (symbol == ' ' || symbol == '\t') /*ignore blanks and tabs*/
+                    continue;
+
+                switch (symbol)
+                {
+                    case '(':
+                        stack.Push(symbol);
+                        break;
+                    case ')':
+                        while ((next = (char)stack.Pop()) != '(')
+                            postfix = postfix + next;
+                        break;
+                    case '+':
+                    case '-':
+                    case '*':
+                    case '/':
+                    case '%':
+                    case '^':
+                        while (!stack.IsEmpty() && PrecedenceChecker((char)stack.Peek()) >= PrecedenceChecker(symbol))
+                            postfix = postfix + stack.Pop();
+                        stack.Push(symbol);
+                        break;
+                    default: /*operand*/
+                        postfix = postfix + symbol;
+                        break;
+                }
+            }
+            while (!stack.IsEmpty())
+                postfix = postfix + stack.Pop();
+            return postfix;
+        }
     }
 }
