@@ -2,7 +2,7 @@
 {
     public class SumOfDigits
     {
-        public static int CalculateSumOfDigits(int number)
+        public static long CalculateSumOfDigits(long number)
         {
             if (number / 10 == 0)
                 return number;
