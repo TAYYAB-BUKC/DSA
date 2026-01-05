@@ -51,6 +51,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.SumOfDigits", "Basics\Recursion\DSA.Basics.SumOfDigits\DSA.Basics.SumOfDigits.csproj", "{11B278E8-C397-4C1B-A028-82CDF72F3B89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.Display1toNDigits", "Basics\Recursion\DSA.Basics.Display1toNDigits\DSA.Basics.Display1toNDigits.csproj", "{630B2C54-88A0-495A-96C7-4F161E2EF1EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{11B278E8-C397-4C1B-A028-82CDF72F3B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11B278E8-C397-4C1B-A028-82CDF72F3B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11B278E8-C397-4C1B-A028-82CDF72F3B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{630B2C54-88A0-495A-96C7-4F161E2EF1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{630B2C54-88A0-495A-96C7-4F161E2EF1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{630B2C54-88A0-495A-96C7-4F161E2EF1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{630B2C54-88A0-495A-96C7-4F161E2EF1EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -153,5 +159,6 @@ Global
 		{9FDD7FFF-1163-4287-8C5A-F52EB7018033} = {356E900C-313E-4043-8204-5D3282A9BB78}
 		{CDD39EB6-D105-4DA2-A66D-6C91D87E961F} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 		{11B278E8-C397-4C1B-A028-82CDF72F3B89} = {CDD39EB6-D105-4DA2-A66D-6C91D87E961F}
+		{630B2C54-88A0-495A-96C7-4F161E2EF1EC} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 	EndGlobalSection
 EndGlobal
