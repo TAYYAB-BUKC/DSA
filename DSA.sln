@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.Display1toNDigit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.BaseConversion", "Basics\Recursion\DSA.Basics.BaseConversion\DSA.Basics.BaseConversion.csproj", "{98CBF9D0-3DDC-4932-8F4B-259603EA7B8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.Exponentiation", "Basics\Recursion\DSA.Basics.Exponentiation\DSA.Basics.Exponentiation.csproj", "{72F9C4A2-3E83-49F7-8A75-31378A0711EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{98CBF9D0-3DDC-4932-8F4B-259603EA7B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98CBF9D0-3DDC-4932-8F4B-259603EA7B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98CBF9D0-3DDC-4932-8F4B-259603EA7B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72F9C4A2-3E83-49F7-8A75-31378A0711EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F9C4A2-3E83-49F7-8A75-31378A0711EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F9C4A2-3E83-49F7-8A75-31378A0711EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F9C4A2-3E83-49F7-8A75-31378A0711EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,5 +170,6 @@ Global
 		{11B278E8-C397-4C1B-A028-82CDF72F3B89} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 		{630B2C54-88A0-495A-96C7-4F161E2EF1EC} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 		{98CBF9D0-3DDC-4932-8F4B-259603EA7B8C} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
+		{72F9C4A2-3E83-49F7-8A75-31378A0711EB} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 	EndGlobalSection
 EndGlobal
