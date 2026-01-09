@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.Exponentiation",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.EuclideanAlgorithm", "Basics\Recursion\DSA.Basics.EuclideanAlgorithm\DSA.Basics.EuclideanAlgorithm.csproj", "{0E46BDFA-EB5C-48C1-9554-52FBA262BA8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.Fibonacci", "Basics\Recursion\DSA.Basics.Fibonacci\DSA.Basics.Fibonacci.csproj", "{1CE7947D-3062-4829-9CA2-5F58A34B2214}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{0E46BDFA-EB5C-48C1-9554-52FBA262BA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E46BDFA-EB5C-48C1-9554-52FBA262BA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E46BDFA-EB5C-48C1-9554-52FBA262BA8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE7947D-3062-4829-9CA2-5F58A34B2214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE7947D-3062-4829-9CA2-5F58A34B2214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE7947D-3062-4829-9CA2-5F58A34B2214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE7947D-3062-4829-9CA2-5F58A34B2214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,5 +184,6 @@ Global
 		{98CBF9D0-3DDC-4932-8F4B-259603EA7B8C} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 		{72F9C4A2-3E83-49F7-8A75-31378A0711EB} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 		{0E46BDFA-EB5C-48C1-9554-52FBA262BA8D} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
+		{1CE7947D-3062-4829-9CA2-5F58A34B2214} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 	EndGlobalSection
 EndGlobal
