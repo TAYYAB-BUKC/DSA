@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.EuclideanAlgorit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.Fibonacci", "Basics\Recursion\DSA.Basics.Fibonacci\DSA.Basics.Fibonacci.csproj", "{1CE7947D-3062-4829-9CA2-5F58A34B2214}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.TowerofHanoi", "Basics\Recursion\DSA.Basics.TowerofHanoi\DSA.Basics.TowerofHanoi.csproj", "{88531697-327C-4136-BDC7-1906282D71EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{1CE7947D-3062-4829-9CA2-5F58A34B2214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CE7947D-3062-4829-9CA2-5F58A34B2214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CE7947D-3062-4829-9CA2-5F58A34B2214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88531697-327C-4136-BDC7-1906282D71EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88531697-327C-4136-BDC7-1906282D71EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88531697-327C-4136-BDC7-1906282D71EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88531697-327C-4136-BDC7-1906282D71EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -185,5 +191,6 @@ Global
 		{72F9C4A2-3E83-49F7-8A75-31378A0711EB} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 		{0E46BDFA-EB5C-48C1-9554-52FBA262BA8D} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 		{1CE7947D-3062-4829-9CA2-5F58A34B2214} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
+		{88531697-327C-4136-BDC7-1906282D71EF} = {9FDD7FFF-1163-4287-8C5A-F52EB7018033}
 	EndGlobalSection
 EndGlobal
