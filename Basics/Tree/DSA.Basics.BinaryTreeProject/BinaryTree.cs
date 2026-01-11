@@ -13,5 +13,29 @@
             root.leftChild.rightChild = new Node('B');
             root.rightChild.leftChild = new Node('X');
         }
+
+        public void DisplayTree()
+        {
+            DisplayTree(root, 0);
+            Console.WriteLine();
+        }
+
+        private void DisplayTree(Node node, int level)
+        {
+            if (node is null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+            
+            DisplayTree(node.rightChild, level + 1);
+            Console.WriteLine();
+
+            for (int index = 0; index < level; index++)
+                Console.Write("    ");
+            Console.Write(node.info);
+
+            DisplayTree(node.leftChild, level + 1);
+        }
     }
 }
