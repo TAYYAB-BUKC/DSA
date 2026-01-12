@@ -37,5 +37,24 @@
 
             DisplayTree(node.leftChild, level + 1);
         }
-    }
+
+		public int CalculateHeight()
+		{
+			return CalculateHeight(root);
+		}
+
+		private int CalculateHeight(Node node)
+		{
+			if (node is null)
+				return 0;
+
+			int leftHeight = CalculateHeight(node.leftChild);
+			int rightHeight = CalculateHeight(node.rightChild);
+
+			if (leftHeight > rightHeight)
+				return 1 + leftHeight;
+			else
+				return 1 + leftHeight;
+		}
+	}
 }
