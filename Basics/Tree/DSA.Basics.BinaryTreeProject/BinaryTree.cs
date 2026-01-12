@@ -37,5 +37,50 @@
 
             DisplayTree(node.leftChild, level + 1);
         }
-    }
+
+		public int CalculateHeight()
+		{
+			return CalculateHeight(root);
+		}
+
+		private int CalculateHeight(Node node)
+		{
+			if (node is null)
+				return 0;
+
+			int leftHeight = CalculateHeight(node.leftChild);
+			int rightHeight = CalculateHeight(node.rightChild);
+
+			if (leftHeight > rightHeight)
+				return 1 + leftHeight;
+			else
+				return 1 + leftHeight;
+		}
+
+		public void LevelOrder()
+		{
+			if (root is null)
+			{
+				Console.WriteLine("Tree is empty");
+				return;
+			}
+
+			Queue<Node> queue = new Queue<Node>();
+			queue.Enqueue(root);
+
+			Node node;
+			while (queue.Count != 0)
+			{
+				node = queue.Dequeue();
+				Console.Write(node.info + " ");
+
+				if (node.leftChild != null)
+					queue.Enqueue(node.leftChild);
+				
+				if (node.rightChild != null)
+					queue.Enqueue(node.rightChild);
+			}
+			Console.WriteLine();
+		}
+	}
 }
