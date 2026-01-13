@@ -82,5 +82,21 @@
 			}
 			Console.WriteLine();
 		}
+
+		public void PreOrder()
+		{
+			PreOrder(root);
+			Console.WriteLine();
+		}
+
+		private void PreOrder(Node node)
+		{
+			if (node is null)
+				return;
+			
+			Console.Write(node.info + " ");
+			PreOrder(node.leftChild);
+			PreOrder(node.rightChild);
+		}
 	}
 }
