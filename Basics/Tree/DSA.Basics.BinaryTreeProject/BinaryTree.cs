@@ -16,7 +16,10 @@
 
         public void DisplayTree()
         {
-            DisplayTree(root, 0);
+            if(root is null)
+				Console.WriteLine("Tree is empty");
+			else
+				DisplayTree(root, 0);	
             Console.WriteLine();
         }
 
@@ -24,7 +27,6 @@
         {
             if (node is null)
             {
-                Console.WriteLine("Tree is empty");
                 return;
             }
             
