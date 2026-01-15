@@ -56,7 +56,7 @@
 			if (leftHeight > rightHeight)
 				return 1 + leftHeight;
 			else
-				return 1 + leftHeight;
+				return 1 + rightHeight;
 		}
 
 		public void LevelOrder()
