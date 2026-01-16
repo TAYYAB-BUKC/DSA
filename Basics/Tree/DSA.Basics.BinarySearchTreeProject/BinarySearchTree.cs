@@ -27,5 +27,32 @@
 			else
 				return 1 + rightHeight;
 		}
+
+		public void DisplayTree()
+		{
+			if (root is null)
+				Console.WriteLine("Tree is empty");
+			else
+				DisplayTree(root, 0);
+			Console.WriteLine();
+		}
+
+		private void DisplayTree(Node node, int level)
+		{
+			if (node is null)
+			{
+				return;
+			}
+
+			DisplayTree(node.rightChild, level + 1);
+			Console.WriteLine();
+
+			for (int index = 0; index < level; index++)
+				Console.Write("    ");
+			Console.Write(node.info);
+
+			DisplayTree(node.leftChild, level + 1);
+		}
+
 	}
 }
