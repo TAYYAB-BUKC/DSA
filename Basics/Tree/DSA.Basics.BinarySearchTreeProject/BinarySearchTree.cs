@@ -69,5 +69,21 @@
 			PreOrder(node.leftChild);
 			PreOrder(node.rightChild);
 		}
+
+		public void InOrder()
+		{
+			InOrder(root);
+			Console.WriteLine();
+		}
+
+		private void InOrder(Node node)
+		{
+			if (node is null)
+				return;
+
+			InOrder(node.leftChild);
+			Console.Write(node.info + " ");
+			InOrder(node.rightChild);
+		}
 	}
 }
