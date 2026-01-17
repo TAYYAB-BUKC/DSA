@@ -85,5 +85,21 @@
 			Console.Write(node.info + " ");
 			InOrder(node.rightChild);
 		}
+
+		public void PostOrder()
+		{
+			PostOrder(root);
+			Console.WriteLine();
+		}
+
+		private void PostOrder(Node node)
+		{
+			if (node is null)
+				return;
+
+			PostOrder(node.leftChild);
+			PostOrder(node.rightChild);
+			Console.Write(node.info + " ");
+		}
 	}
 }
