@@ -109,7 +109,7 @@
 
 		private void InOrder(Node node)
 		{
-			if (node == null)
+			if (node is null)
 				return;
 
 			InOrder(node.leftChild);
