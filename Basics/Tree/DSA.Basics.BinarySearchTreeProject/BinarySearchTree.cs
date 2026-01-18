@@ -101,5 +101,24 @@
 			PostOrder(node.rightChild);
 			Console.Write(node.info + " ");
 		}
+
+		public void Insert(int info)
+		{
+			root = Insert(root, info);
+		}
+
+		private Node Insert(Node node, int info)
+		{
+			if (node == null)
+				node = new Node(info);
+			else if (info < node.info)
+				node.leftChild = Insert(node.leftChild, info);
+			else if (info > node.info)
+				node.rightChild = Insert(node.rightChild, info);
+			else
+				Console.WriteLine(info + " already present in tree");
+			
+			return node;
+		}
 	}
 }
