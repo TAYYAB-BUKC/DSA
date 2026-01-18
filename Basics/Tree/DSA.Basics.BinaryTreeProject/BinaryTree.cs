@@ -109,7 +109,7 @@
 
 		private void InOrder(Node node)
 		{
-			if (node == null)
+			if (node is null)
 				return;
 
 			InOrder(node.leftChild);
@@ -123,14 +123,14 @@
 			Console.WriteLine();
 		}
 
-		private void PostOrder(Node p)
+		private void PostOrder(Node node)
 		{
-			if (p is null)
+			if (node is null)
 				return;
 
-			PostOrder(p.leftChild);
-			PostOrder(p.rightChild);
-			Console.Write(p.info + " ");
+			PostOrder(node.leftChild);
+			PostOrder(node.rightChild);
+			Console.Write(node.info + " ");
 		}
 	}
 }
