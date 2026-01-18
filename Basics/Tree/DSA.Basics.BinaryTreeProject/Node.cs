@@ -3,10 +3,10 @@
     public class Node
     {
         public Node leftChild = null!;
-        public int info;
+        public char info;
         public Node rightChild = null!;
 
-        public Node(int info)
+        public Node(char info)
         {
             this.info = info;
         }
