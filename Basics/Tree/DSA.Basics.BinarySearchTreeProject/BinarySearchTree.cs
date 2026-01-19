@@ -120,5 +120,24 @@
 			
 			return node;
 		}
+
+		public bool Search(int info)
+		{
+			return Search(root, info) is not null;
+		}
+
+		private Node Search(Node node, int info)
+		{
+			if (node is null)
+				return null!; /*key not found*/
+			
+			if (info < node.info)/*search in left subtree*/
+				return Search(node.leftChild, info);
+			
+			if (info > node.info)/*search in right subtree*/
+				return Search(node.rightChild, info);
+
+			return node; /*key found*/
+		}
 	}
 }
