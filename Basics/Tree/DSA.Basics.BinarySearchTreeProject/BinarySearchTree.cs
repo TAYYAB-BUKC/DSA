@@ -139,5 +139,49 @@
 
 			return node; /*key found*/
 		}
+
+		public void Delete(int info)
+		{
+			root = Delete(root, info);
+		}
+
+		private Node Delete(Node node, int info)
+		{
+			Node tempNode, tempInfo;
+
+			if (node is null)
+			{
+				Console.WriteLine(info + "  not found");
+				return null!;
+			}
+
+			if (info < node.info)  /*delete from left subtree*/
+				node.leftChild = Delete(node.leftChild, info);
+			else if (info > node.info) /*delete from right subtree*/
+				node.rightChild = Delete(node.rightChild, info);
+			else
+			{
+				/*key to be deleted is found*/
+				if (node.leftChild != null && node.rightChild != null)  /*2 children*/
+				{
+					tempInfo = node.rightChild;
+					while (tempInfo.leftChild != null)
+						tempInfo = tempInfo.leftChild;
+					
+					node.info = tempInfo.info;
+					node.rightChild = Delete(node.rightChild, tempInfo.info);
+				}
+				else   /*1 child or no child*/
+				{
+					if (node.leftChild != null) /*only left child*/
+						tempNode = node.leftChild;
+					else  /*only right child or no child*/
+						tempNode = node.rightChild;
+					
+					node = tempNode;
+				}
+			}
+			return node;
+		}
 	}
 }
