@@ -199,5 +199,21 @@
 
 			return Min(node.leftChild);
 		}
+
+		public int Max()
+		{
+			if (IsEmpty())
+				throw new InvalidOperationException("Tree is empty");
+			
+			return Max(root).info;
+		}
+
+		private Node Max(Node node)
+		{
+			if (node.rightChild is null)
+				return node;
+
+			return Max(node.rightChild);
+		}
 	}
 }
