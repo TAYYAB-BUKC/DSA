@@ -183,5 +183,21 @@
 			}
 			return node;
 		}
+
+		public int Min()
+		{
+			if (IsEmpty())
+				throw new InvalidOperationException("Tree is empty");
+			
+			return Min(root).info;
+		}
+
+		private Node Min(Node node)
+		{
+			if (node.leftChild is null)
+				return node;
+
+			return Min(node.leftChild);
+		}
 	}
 }
