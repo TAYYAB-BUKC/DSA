@@ -215,5 +215,17 @@
 
 			return Max(node.rightChild);
 		}
+
+		public int MinWithoutRecursion()
+		{
+			if (IsEmpty())
+				throw new InvalidOperationException("Tree is empty");
+			
+			Node node = root;
+			while (node.leftChild != null)
+				node = node.leftChild;
+
+			return node.info;
+		}
 	}
 }
