@@ -268,5 +268,75 @@
 			else
 				node.rightChild = temp;
 		}
+
+		public bool SearchWithoutRecursion(int info)
+		{
+			Node node = root;
+			while (node != null)
+			{
+				if (info < node.info)
+					node = node.leftChild; /*Move to left child*/
+				else if (info > node.info)
+					node = node.rightChild;  /*Move to right child */
+				else    /*info found*/
+					return true;
+			}
+			return false;
+		}
+
+		public void DeleteWithoutRecursion(int info)
+		{
+			Node root = this.root;
+			Node node = null!;
+
+			while (root != null)
+			{
+				if (info == root.info)
+					break;
+				node = root;
+				if (info < root.info)
+					root = root.leftChild;
+				else
+					root = root.rightChild;
+			}
+
+			if (root == null)
+			{
+				Console.WriteLine(info + " not found");
+				return;
+			}
+
+			/*Case C: 2 children*/
+			/*Find inorder successor and its parent*/
+			Node s, ps;
+			if (root.leftChild != null && root.rightChild != null)
+			{
+				ps = root;
+				s = root.rightChild;
+
+				while (s.leftChild != null)
+				{
+					ps = s;
+					s = s.leftChild;
+				}
+				root.info = s.info;
+				root = s;
+				node = ps;
+			}
+
+			/*Case B and Case A : 1 or no child*/
+			Node ch;
+			if (root.leftChild != null) /*node to be deleted has left child */
+				ch = root.leftChild;
+			else                /*node to be deleted has right child or no child*/
+				ch = root.rightChild;
+
+			if (node == null)   /*node to be deleted is root node*/
+				this.root = ch;
+			else if (root == node.leftChild)/*node is left child of its parent*/
+				node.leftChild = ch;
+			else       /*node is right child of its parent*/
+				node.rightChild = ch;
+		}
 	}
 }
