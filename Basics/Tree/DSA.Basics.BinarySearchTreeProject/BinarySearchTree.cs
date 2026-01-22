@@ -239,5 +239,34 @@
 
 			return node.info;
 		}
+
+		public void InsertWithoutRecursion(int info)
+		{
+			Node root = this.root;
+			Node node = null!;
+
+			while (root != null)
+			{
+				node = root;
+				if (info < root.info)
+					root = root.leftChild;
+				else if (info > root.info)
+					root = root.rightChild;
+				else
+				{
+					Console.WriteLine(info + " already present in the tree");
+					return;
+				}
+			}
+
+			Node temp = new Node(info);
+
+			if (node == null)
+				this.root = temp;
+			else if (info < node.info)
+				node.leftChild = temp;
+			else
+				node.rightChild = temp;
+		}
 	}
 }
