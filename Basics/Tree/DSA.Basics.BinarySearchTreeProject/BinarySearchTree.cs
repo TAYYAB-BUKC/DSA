@@ -268,5 +268,20 @@
 			else
 				node.rightChild = temp;
 		}
+
+		public bool SearchWithoutRecursion(int info)
+		{
+			Node node = root;
+			while (node != null)
+			{
+				if (info < node.info)
+					node = node.leftChild; /*Move to left child*/
+				else if (info > node.info)
+					node = node.rightChild;  /*Move to right child */
+				else    /*info found*/
+					return true;
+			}
+			return false;
+		}
 	}
 }
