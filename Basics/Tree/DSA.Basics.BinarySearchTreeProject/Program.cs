@@ -24,6 +24,46 @@ while (true)
 
 	switch (choice)
 	{
+		case 1:
+			tree.DisplayTree();
+			break;
+		case 2:
+			Console.Write("Enter the key to be searched : ");
+			info = Convert.ToInt32(Console.ReadLine());
+
+			if (tree.Search(info))
+				Console.WriteLine("Key found");
+			else
+				Console.WriteLine("Key not found");
+			break;
+		case 3:
+			Console.Write("Enter the key to be inserted : ");
+			info = Convert.ToInt32(Console.ReadLine());
+			tree.Insert(info);
+			break;
+		case 4:
+			Console.Write("Enter the key to be deleted : ");
+			info = Convert.ToInt32(Console.ReadLine());
+			tree.Delete(info);
+			break;
+		case 5:
+			tree.PreOrder();
+			break;
+		case 6:
+			tree.InOrder();
+			break;
+		case 7:
+			tree.PostOrder();
+			break;
+		case 8:
+			Console.WriteLine("Height of tree is " + tree.CalculateHeight());
+			break;
+		case 9:
+			Console.WriteLine("Minimum key is " + tree.Min());
+			break;
+		case 10:
+			Console.WriteLine("Maximum key is " + tree.Max());
+			break;
 		default:
 			Console.WriteLine("Wrong choice");
 			break;
