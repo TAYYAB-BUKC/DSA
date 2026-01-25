@@ -86,5 +86,19 @@
 			}
 			heap[index] = value;
 		}
+
+		public void Display()
+		{
+			if (size == 0)
+			{
+				Console.WriteLine("Heap is empty");
+				return;
+			}
+
+			Console.WriteLine("Heap size = " + size);
+			for (int index = 1; index <= size; index++)
+				Console.Write(heap[index] + " ");
+			Console.WriteLine();
+		}
 	}
 }
