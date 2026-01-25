@@ -39,5 +39,52 @@
 			}
 			heap[size] = value;
 		}
+
+		public int DeleteRoot()
+		{
+			if (size == 0)
+				throw new InvalidOperationException("Heap is Empty");
+
+			int maxValue = heap[1];
+			heap[1] = heap[size];
+			size--;
+			RestoreDown(1);
+			return maxValue;
+		}
+
+		private void RestoreDown(int index)
+		{
+			int value = heap[index];
+			int leftChild = 2 * index, rightChild = leftChild + 1;
+
+			while (rightChild <= size)
+			{
+				if (value >= heap[leftChild] && value >= heap[rightChild])
+				{
+					heap[index] = value;
+					return;
+				}
+				else if (heap[leftChild] > heap[rightChild])
+				{
+					heap[index] = heap[leftChild];
+					index = leftChild;
+				}
+				else
+				{
+					heap[index] = heap[rightChild];
+					index = rightChild;
+				}
+				leftChild = 2 * index;
+				rightChild = leftChild + 1;
+			}
+
+			/*If number of nodes is even*/
+			if (leftChild == size && value < heap[leftChild])
+			{
+				heap[index] = heap[leftChild];
+				index = leftChild;
+			}
+			heap[index] = value;
+		}
 	}
 }
