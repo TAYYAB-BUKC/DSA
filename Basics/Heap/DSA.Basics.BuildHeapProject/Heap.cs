@@ -2,7 +2,7 @@
 {
 	public class Heap
 	{
-		private void RestoreUp(int size, int[] heap)
+		private static void RestoreUp(int size, int[] heap)
 		{
 			int value = heap[size];
 			int parentIndex = size / 2;
