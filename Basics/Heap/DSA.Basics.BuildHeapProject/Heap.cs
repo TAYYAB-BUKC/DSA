@@ -15,5 +15,11 @@
 			}
 			heap[size] = value;
 		}
+
+		public static void BuildHeap_TopDown(int[] heap, int size)
+		{
+			for (int index = 2; index <= size; index++)
+				RestoreUp(index, heap);
+		}
 	}
 }
