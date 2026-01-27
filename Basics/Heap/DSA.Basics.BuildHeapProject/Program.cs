@@ -1,4 +1,6 @@
-﻿int[] heap = { 99999, 1, 4, 5, 7, 9, 10 };
+﻿using DSA.Basics.BuildHeapProject;
+
+int[] heap = { 99999, 1, 4, 5, 7, 9, 10 };
 
 int choice;
 
@@ -17,6 +19,18 @@ while (true)
 
 	switch (choice)
 	{
+		case 1:
+			heap = [99999, 1, 4, 5, 7, 9, 10];
+			break;
+		case 2:
+			Heap.BuildHeap_TopDown(heap, heap.Length - 1);
+			break;
+		case 3:
+			Heap.BuildHeap_BottomUp(heap, heap.Length - 1);
+			break;
+		case 4:
+			Heap.Display(heap);
+			break;
 		default:
 			Console.WriteLine("Wrong choice");
 			break;
