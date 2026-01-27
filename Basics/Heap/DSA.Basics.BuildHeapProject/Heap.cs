@@ -61,5 +61,19 @@
 			for (int index = size / 2; index >= 1; index--)
 				RestoreDown(index, heap, size);
 		}
+
+		public static void Display(int[] heap)
+		{
+			if (heap.Length == 0)
+			{
+				Console.WriteLine("Heap is empty");
+				return;
+			}
+
+			Console.WriteLine("Heap size = " + heap.Length);
+			for (int index = 1; index <= heap.Length - 1; index++)
+				Console.Write(heap[index] + " ");
+			Console.WriteLine();
+		}
 	}
 }
