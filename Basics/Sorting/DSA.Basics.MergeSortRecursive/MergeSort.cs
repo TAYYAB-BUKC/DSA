@@ -29,5 +29,21 @@
 				mergedArray[index++] = array[secondLowerBoundIndex++];
 		}
 
+		private static void Sort(int[] array, int[] mergedArray, int lowerBound, int upperBound)
+		{
+			if (lowerBound == upperBound) /*only one element*/
+				return;
+
+			int midBound = (lowerBound + upperBound) / 2;
+
+			Sort(array, mergedArray, lowerBound, midBound);  /* Sort array[lowerBound]....array[midBound] */
+			Sort(array, mergedArray, midBound + 1, upperBound);  /* Sort array[midBound+1]....array[upperBound] */
+
+			/* Merge array[lowerBound]...array[midBound] and array[midBound+1]....array[upperBound] to mergedArray[lowerBound]...mergedArray[upperBound] */
+			Merge(array, mergedArray, lowerBound, midBound, midBound + 1, upperBound);
+
+			/* Copy mergedArray[lowerBound]...mergedArray[upperBound] to array[lowerBound]...array[upperBound] */
+			Copy(array, mergedArray, lowerBound, upperBound);
+		}
 	}
 }
