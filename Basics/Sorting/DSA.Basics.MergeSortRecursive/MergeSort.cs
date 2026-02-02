@@ -29,7 +29,7 @@
 				mergedArray[index++] = array[secondLowerBoundIndex++];
 		}
 
-		private static void Sort(int[] array, int[] mergedArray, int lowerBound, int upperBound)
+		public static void Sort(int[] array, int[] mergedArray, int lowerBound, int upperBound)
 		{
 			if (lowerBound == upperBound) /*only one element*/
 				return;
