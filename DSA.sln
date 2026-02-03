@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.MergeSortSubArra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.MergeSortRecursive", "Basics\Sorting\DSA.Basics.MergeSortRecursive\DSA.Basics.MergeSortRecursive.csproj", "{4F71CE1E-5BA1-4F20-886E-CD627FA5066F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.MergeSortIterative", "Basics\Sorting\DSA.Basics.MergeSortIterative\DSA.Basics.MergeSortIterative.csproj", "{B457094C-EBB3-4DC0-AE5E-9C2A6372F7C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,10 @@ Global
 		{4F71CE1E-5BA1-4F20-886E-CD627FA5066F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F71CE1E-5BA1-4F20-886E-CD627FA5066F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F71CE1E-5BA1-4F20-886E-CD627FA5066F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B457094C-EBB3-4DC0-AE5E-9C2A6372F7C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B457094C-EBB3-4DC0-AE5E-9C2A6372F7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B457094C-EBB3-4DC0-AE5E-9C2A6372F7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B457094C-EBB3-4DC0-AE5E-9C2A6372F7C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -278,5 +284,6 @@ Global
 		{428025E1-508F-4502-B924-A5E2C821366A} = {99A473BD-5DD3-4022-8151-7D8EDDEE0866}
 		{B6A5E255-755F-412E-8DCF-30458436E993} = {99A473BD-5DD3-4022-8151-7D8EDDEE0866}
 		{4F71CE1E-5BA1-4F20-886E-CD627FA5066F} = {99A473BD-5DD3-4022-8151-7D8EDDEE0866}
+		{B457094C-EBB3-4DC0-AE5E-9C2A6372F7C6} = {99A473BD-5DD3-4022-8151-7D8EDDEE0866}
 	EndGlobalSection
 EndGlobal
