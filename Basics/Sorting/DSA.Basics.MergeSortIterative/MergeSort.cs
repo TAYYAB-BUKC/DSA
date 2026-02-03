@@ -29,5 +29,28 @@
 				mergedArray[index++] = array[secondLowerBoundIndex++];
 		}
 
+		private static void Sort(int[] array, int[] mergedArray, int size, int length)
+		{
+			int index, firstLowerBound = 0, firstUpperBound, secondLowerBound, secondUpperBound;
+
+			while (firstLowerBound + size <= length - 1)
+			{
+				firstUpperBound = firstLowerBound + size - 1;
+				secondLowerBound = firstLowerBound + size;
+				secondUpperBound = secondLowerBound + size - 1;
+
+				if (secondUpperBound >= length)/*if length of last sublist is less than size*/
+					secondUpperBound = length - 1;
+
+				Merge(array, mergedArray, firstLowerBound, firstUpperBound, secondLowerBound, secondUpperBound);
+
+				firstLowerBound = secondUpperBound + 1; /*Take next two sublists for merging*/
+			}
+
+			for (index = firstLowerBound; index <= length - 1; index++)
+				mergedArray[index] = array[index]; /*If any sublist is left alone*/
+
+			Copy(array, mergedArray, length);
+		}
 	}
 }
