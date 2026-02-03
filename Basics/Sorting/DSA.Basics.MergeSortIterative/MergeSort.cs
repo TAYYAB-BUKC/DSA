@@ -52,5 +52,16 @@
 
 			Copy(array, mergedArray, length);
 		}
+
+		public static void Sort(int[] array, int length)
+		{
+			int[] temp = new int[length];
+			int size = 1;
+			while (size <= length - 1)
+			{
+				Sort(array, temp, size, length);
+				size = size * 2;
+			}
+		}
 	}
 }
