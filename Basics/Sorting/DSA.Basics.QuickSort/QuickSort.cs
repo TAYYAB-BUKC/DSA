@@ -37,5 +37,15 @@
 
 			return secondIndex;
 		}
+
+		private static void Sort(int[] array, int lowerBound, int upperBound)
+		{
+			if (lowerBound >= upperBound) /*zero or one element in sublist*/
+				return;
+
+			int partition = Partition(array, lowerBound, upperBound);
+			Sort(array, lowerBound, partition - 1); /*Sort left sublist*/
+			Sort(array, partition + 1, upperBound);  /*Sort right sublist*/
+		}
 	}
 }
