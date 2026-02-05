@@ -47,5 +47,10 @@
 			Sort(array, lowerBound, partition - 1); /*Sort left sublist*/
 			Sort(array, partition + 1, upperBound);  /*Sort right sublist*/
 		}
+
+		public static void Sort(int[] array, int length)
+		{
+			Sort(array, 0, length - 1);
+		}
 	}
 }
