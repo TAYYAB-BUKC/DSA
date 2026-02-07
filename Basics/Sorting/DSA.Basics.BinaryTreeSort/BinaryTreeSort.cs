@@ -42,5 +42,16 @@
 
 			return node;
 		}
+
+
+		public static void Sort(int[] array, int length)
+		{
+			BinaryTreeSort tree = new BinaryTreeSort();
+
+			for (int i = 0; i < length; i++)
+				tree.Insert(array[i]);
+
+			tree.InOrder(array);
+		}
 	}
 }
