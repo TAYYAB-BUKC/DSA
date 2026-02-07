@@ -25,5 +25,22 @@
 			array[k++] = node.info;
 			InOrder(node.rightChild, array);
 		}
+
+		public void Insert(int info)
+		{
+			root = Insert(root, info);
+		}
+
+		private Node Insert(Node node, int info)
+		{
+			if (node == null)
+				node = new Node(info);
+			else if (info < node.info)
+				node.leftChild = Insert(node.leftChild, info);
+			else
+				node.rightChild = Insert(node.rightChild, info);
+
+			return node;
+		}
 	}
 }
