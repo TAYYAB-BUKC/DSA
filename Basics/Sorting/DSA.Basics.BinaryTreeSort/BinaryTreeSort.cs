@@ -43,7 +43,6 @@
 			return node;
 		}
 
-
 		public static void Sort(int[] array, int length)
 		{
 			BinaryTreeSort tree = new BinaryTreeSort();
