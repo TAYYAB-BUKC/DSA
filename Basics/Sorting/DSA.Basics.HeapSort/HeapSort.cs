@@ -41,5 +41,25 @@
 			for (int index = size / 2; index >= 1; index--)
 				RestoreDown(index, heap, size);
 		}
+
+		public static void Sort(int[] array, int length)
+		{
+			BuildHeap_BottomUp(array, length);
+
+			Console.WriteLine("Heap is  : ");
+			for (int index = 1; index <= length; index++)
+				Console.Write(array[index] + " ");
+			Console.WriteLine();
+
+			int maxValue;
+			while (length > 1)
+			{
+				maxValue = array[1];
+				array[1] = array[length];
+				array[length] = maxValue;
+				length--;
+				RestoreDown(1, array, length);
+			}
+		}
 	}
 }
