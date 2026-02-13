@@ -36,5 +36,55 @@
 			}
 			return digit;
 		}
+
+		public static Node Sort(Node start, int length)
+		{
+			Node[] rear = new Node[length];
+			Node[] front = new Node[length];
+
+			int leastSigPos = 1;
+			int mostSigPos = DigitsInLargest(start);
+
+			int index, dig;
+			Node node;
+			for (int k = leastSigPos; k <= mostSigPos; k++)
+			{
+				/*Making all the queues empty at the beginning of each pass*/
+				for (index = 0; index <= length; index++)
+				{
+					rear[index] = null!;
+					front[index] = null!;
+				}
+
+				for (node = start; node != null; node = node.link)
+				{
+					/*Find kth digit from right in the number*/
+					dig = Digit(node.info, k);
+
+					/*Insert the node in Queue(dig) */
+					if (front[dig] == null)
+						front[dig] = node;
+					else
+						rear[dig].link = node;
+					rear[dig] = node;
+				}
+
+				/*Join all queues to form new linked list*/
+				index = 0;
+				while (front[index] == null)  /*Finding first non empty queue*/
+					index++;
+				start = front[index];
+				while (index <= length - 2)
+				{
+					if (rear[index + 1] != null) /*if (index+1)th  queue is not empty*/
+						rear[index].link = front[index + 1]; /*join end of ith queue to start of (index+1)th queue*/
+					else
+						rear[index + 1] = rear[index]; /*continue with rear[index]*/
+					index++;
+				}
+				rear[length - 1].link = null!;
+			}
+			return start;
+		}
 	}
 }
