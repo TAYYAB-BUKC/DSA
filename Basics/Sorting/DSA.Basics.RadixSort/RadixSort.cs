@@ -50,7 +50,7 @@
 			for (int k = leastSigPos; k <= mostSigPos; k++)
 			{
 				/*Making all the queues empty at the beginning of each pass*/
-				for (index = 0; index <= length; index++)
+				for (index = 1; index <= length; index++)
 				{
 					rear[index] = null!;
 					front[index] = null!;
