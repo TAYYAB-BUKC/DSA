@@ -37,10 +37,10 @@
 			return digit;
 		}
 
-		public static Node Sort(Node start, int length)
+		public static Node Sort(Node start)
 		{
-			Node[] rear = new Node[length];
-			Node[] front = new Node[length];
+			Node[] rear = new Node[10];
+			Node[] front = new Node[10];
 
 			int leastSigPos = 1;
 			int mostSigPos = DigitsInLargest(start);
@@ -50,7 +50,7 @@
 			for (int k = leastSigPos; k <= mostSigPos; k++)
 			{
 				/*Making all the queues empty at the beginning of each pass*/
-				for (index = 1; index <= length; index++)
+				for (index = 0; index <= 9; index++)
 				{
 					rear[index] = null!;
 					front[index] = null!;
@@ -74,7 +74,7 @@
 				while (front[index] == null)  /*Finding first non empty queue*/
 					index++;
 				start = front[index];
-				while (index <= length - 2)
+				while (index <= 8)
 				{
 					if (rear[index + 1] != null) /*if (index+1)th  queue is not empty*/
 						rear[index].link = front[index + 1]; /*join end of ith queue to start of (index+1)th queue*/
@@ -82,7 +82,7 @@
 						rear[index + 1] = rear[index]; /*continue with rear[index]*/
 					index++;
 				}
-				rear[length - 1].link = null!;
+				rear[9].link = null!;
 			}
 			return start;
 		}
