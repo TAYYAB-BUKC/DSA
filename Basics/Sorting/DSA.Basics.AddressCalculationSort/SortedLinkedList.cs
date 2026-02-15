@@ -26,5 +26,27 @@
 			}
 			Console.WriteLine();
 		}
+
+		public void InsertInOrder(int info)
+		{
+			Node newNode = new Node(info);
+
+			/*List empty or new node to be inserted before first node*/
+			if (start is null || info < start.info)
+			{
+				newNode.link = start;
+				start = newNode;
+				return;
+			}
+
+			Node node = start;
+			while (node.link != null && node.link.info <= info)
+			{
+				node = node.link;
+			}
+
+			newNode.link = node.link;
+			node.link = newNode;
+		}
 	}
 }
