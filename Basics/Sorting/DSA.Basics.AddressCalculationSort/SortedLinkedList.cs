@@ -72,5 +72,23 @@
 			else
 				Console.WriteLine($"{info} is found at position {position} in the list.");
 		}
+
+		public void CreateList()
+		{
+			int index, numberOfNodes, info;
+
+			Console.Write("Enter the number of nodes : ");
+			numberOfNodes = Convert.ToInt32(Console.ReadLine());
+
+			if (numberOfNodes < 1)
+				return;
+
+			for (index = 1; index <= numberOfNodes; index++)
+			{
+				Console.Write("Enter the element to be inserted : ");
+				info = Convert.ToInt32(Console.ReadLine());
+				InsertInOrder(info);
+			}
+		}
 	}
 }
