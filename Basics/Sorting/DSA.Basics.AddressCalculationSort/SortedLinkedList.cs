@@ -90,5 +90,12 @@
 				InsertInOrder(info);
 			}
 		}
+
+		private int Hash(int info, int large)
+		{
+			float temp;
+			temp = (float)info / large;
+			return (int)(temp * 5);
+		}
 	}
 }
