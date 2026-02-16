@@ -97,5 +97,40 @@
 			temp = (float)info / large;
 			return (int)(temp * 5);
 		}
+
+		public void Sort(int[] array, int length)
+		{
+			int i, j, x;
+
+			SortedLinkedList[] List = new SortedLinkedList[6];
+			for (i = 0; i < 6; i++)
+				List[i] = new SortedLinkedList();
+
+			int large = 0;
+			for (i = 0; i < length; i++)
+			{
+				if (array[i] > large)
+					large = array[i];
+			}
+
+			for (i = 0; i < length; i++)
+			{
+				x = Hash(array[i], large);
+				List[x].InsertInOrder(array[i]);
+			}
+
+			/*Elements of linked lists are copied to array*/
+			Node node;
+			i = 0;
+			for (j = 0; j <= 5; j++)
+			{
+				node = List[j].GetStart();
+				while (node != null)
+				{
+					array[i++] = node.info;
+					node = node.link;
+				}
+			}
+		}
 	}
 }
