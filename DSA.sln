@@ -101,6 +101,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.RadixSort", "Bas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.AddressCalculationSort", "Basics\Sorting\DSA.Basics.AddressCalculationSort\DSA.Basics.AddressCalculationSort.csproj", "{D287D395-A07B-4970-8917-B1AEC30AFE8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.LinearSearch", "Basics\Searching\DSA.Basics.LinearSearch\DSA.Basics.LinearSearch.csproj", "{B87E5A63-6105-421A-A203-B25AB16198FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Searching", "Searching", "{3C1096F8-0A07-4185-8668-F7B655AB7384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -267,6 +271,10 @@ Global
 		{D287D395-A07B-4970-8917-B1AEC30AFE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D287D395-A07B-4970-8917-B1AEC30AFE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D287D395-A07B-4970-8917-B1AEC30AFE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87E5A63-6105-421A-A203-B25AB16198FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87E5A63-6105-421A-A203-B25AB16198FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87E5A63-6105-421A-A203-B25AB16198FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87E5A63-6105-421A-A203-B25AB16198FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -320,5 +328,7 @@ Global
 		{911E479B-4563-413D-8BC7-91ECC1B04120} = {99A473BD-5DD3-4022-8151-7D8EDDEE0866}
 		{1A90C5E2-51D8-4BEB-98D6-876DD5AC40A0} = {99A473BD-5DD3-4022-8151-7D8EDDEE0866}
 		{D287D395-A07B-4970-8917-B1AEC30AFE8F} = {99A473BD-5DD3-4022-8151-7D8EDDEE0866}
+		{B87E5A63-6105-421A-A203-B25AB16198FC} = {3C1096F8-0A07-4185-8668-F7B655AB7384}
+		{3C1096F8-0A07-4185-8668-F7B655AB7384} = {356E900C-313E-4043-8204-5D3282A9BB78}
 	EndGlobalSection
 EndGlobal
