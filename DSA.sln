@@ -111,6 +111,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.LinearSearchWith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.BinarySearch", "Basics\Searching\DSA.Basics.BinarySearch\DSA.Basics.BinarySearch.csproj", "{5DE2538A-0D1E-4891-A53C-0E0843E165E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Basics.BinarySearchRecursive", "Basics\Searching\DSA.Basics.BinarySearchRecursive\DSA.Basics.BinarySearchRecursive.csproj", "{476126E7-B4BE-42B9-8465-768EAE2CB7A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,10 @@ Global
 		{5DE2538A-0D1E-4891-A53C-0E0843E165E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DE2538A-0D1E-4891-A53C-0E0843E165E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DE2538A-0D1E-4891-A53C-0E0843E165E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476126E7-B4BE-42B9-8465-768EAE2CB7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476126E7-B4BE-42B9-8465-768EAE2CB7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476126E7-B4BE-42B9-8465-768EAE2CB7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476126E7-B4BE-42B9-8465-768EAE2CB7A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -351,5 +357,6 @@ Global
 		{321888FB-CD0F-4956-8DEB-07058EAA5E14} = {3C1096F8-0A07-4185-8668-F7B655AB7384}
 		{B4D4A6D7-9C94-43D2-A496-53396CD78C7B} = {3C1096F8-0A07-4185-8668-F7B655AB7384}
 		{5DE2538A-0D1E-4891-A53C-0E0843E165E6} = {3C1096F8-0A07-4185-8668-F7B655AB7384}
+		{476126E7-B4BE-42B9-8465-768EAE2CB7A5} = {3C1096F8-0A07-4185-8668-F7B655AB7384}
 	EndGlobalSection
 EndGlobal
