@@ -2,7 +2,7 @@
 {
 	public class BinarySearch
 	{
-		public int Search(int[] array, int target)
+		public static int Search(int[] array, int target)
 		{
 			int left = 0;
 			int right = array.Length - 1;
