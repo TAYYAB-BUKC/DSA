@@ -21,5 +21,12 @@
 			}
 			Console.WriteLine();
 		}
+
+		public void InsertAtBeginning(Student info)
+		{
+			Node newNode = new Node(info);
+			newNode.link = start;
+			start = newNode;
+		}
 	}
 }
