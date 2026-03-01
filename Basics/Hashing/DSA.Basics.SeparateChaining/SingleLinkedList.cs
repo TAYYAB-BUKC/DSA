@@ -28,5 +28,24 @@
 			newNode.link = start;
 			start = newNode;
 		}
+
+		public Student Search(int id)
+		{
+			Node node = start;
+			while (node != null)
+			{
+				if (node.info.GetStudentId() == id)
+					break;
+				node = node.link;
+			}
+
+			if (node is null)
+			{
+				Console.WriteLine(id + " not found in list");
+				return null!;
+			}
+			else
+				return node.info;
+		}
 	}
 }
