@@ -47,5 +47,34 @@
 			else
 				return node.info;
 		}
+
+		public void Delete(int info)
+		{
+			if (start is null)
+			{
+				Console.WriteLine("List is empty.");
+				return;
+			}
+
+			if (start.info.GetStudentId() == info)
+			{
+				start = start.link;
+				return;
+			}
+
+			Node node = start;
+			while (node.link != null)
+			{
+				if (node.link.info.GetStudentId() == info)
+					break;
+
+				node = node.link;
+			}
+
+			if (node.link is null)
+				Console.WriteLine($"Element {info} not in list");
+			else
+				node!.link = node.link.link;
+		}
 	}
 }
