@@ -21,5 +21,18 @@
 		{
 			return (key % size);
 		}
+
+		public void DisplayTable()
+		{
+			for (int i = 0; i < size; i++)
+			{
+				Console.Write("[" + i + "]  -->  ");
+
+				if (array[i] != null)
+					array[i].DisplayList();
+				else
+					Console.WriteLine("___");
+			}
+		}
 	}
 }
