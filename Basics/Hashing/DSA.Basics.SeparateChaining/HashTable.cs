@@ -34,5 +34,15 @@
 					Console.WriteLine("___");
 			}
 		}
+
+		public Student Search(int key)
+		{
+			int hash = GenerateHash(key);
+
+			if (array[hash] != null)
+				return array[hash].Search(key);
+
+			return null!;
+		}
 	}
 }
