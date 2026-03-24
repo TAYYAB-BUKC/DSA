@@ -56,5 +56,18 @@
 			array[hash].InsertAtBeginning(newStudent);
 			length++;
 		}
+
+		public void Delete(int key)
+		{
+			int hash = GenerateHash(key);
+
+			if (array[hash] != null)
+			{
+				array[hash].Delete(key);
+				length--;
+			}
+			else
+				Console.WriteLine("Value " + key + " not present\n");
+		}
 	}
 }
