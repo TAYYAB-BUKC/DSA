@@ -44,5 +44,17 @@
 
 			return null!;
 		}
+
+		public void Insert(Student newStudent)
+		{
+			int key = newStudent.GetStudentId();
+			int hash = GenerateHash(key);
+
+			if (array[hash] == null)
+				array[hash] = new SingleLinkedList();
+
+			array[hash].InsertAtBeginning(newStudent);
+			length++;
+		}
 	}
 }
